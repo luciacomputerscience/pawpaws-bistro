@@ -36,6 +36,7 @@ public class InteractablesManager : MonoBehaviour
 
     void Start()
     {
+        //Get the main camera on start
         mainCamera = Camera.main;
 
         AllChildrenWorldToScreenPoint();
@@ -43,10 +44,13 @@ public class InteractablesManager : MonoBehaviour
 
     private void AllChildrenWorldToScreenPoint()
     {
-        for (int i = 0; i <this.transform.childCount; i++)
+        // Loop through all the children objects we made and run WorldToScreenPoint on them
+        // Cursor position will be giving us screen point info to determine whats within interactable distance.
+        for (int i = 0; i < this.transform.childCount; i++)
         {
             transform.GetChild(i).position = mainCamera.WorldToScreenPoint(transform.GetChild(i).position);
 
+            // Increase scale by 100
             transform.GetChild(i).localScale = Vector3.one * 100;
         }
     }
