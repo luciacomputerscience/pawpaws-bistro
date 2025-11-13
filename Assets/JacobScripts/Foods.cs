@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Foods : MonoBehaviour
 {
+    public GameObject foodObject;
     public string fName { get; set; }
     public string allergen { get; set; }
     public float cookTime;
     public float cookedTime = 0f;
+    public bool CorrectCookingSurface = false;
     private bool timerRunning = false;
 
     public void StartAndStop()
@@ -39,12 +41,16 @@ public class Foods : MonoBehaviour
 
     private void Update()
     {
-        if (timerRunning == true)
+
+
+        if (timerRunning == true && CorrectCookingSurface == true)
         {
             cookedTime += Time.deltaTime;
 
         }
     }
+
+
 
     public void StartTimer()
     {
@@ -55,7 +61,12 @@ public class Foods : MonoBehaviour
     {
         timerRunning = false;
     }
+    public void EndCook()
+    {
 
+        Score();
+
+    }
     public string Score()
     {
         float score = cookTime - cookedTime;
