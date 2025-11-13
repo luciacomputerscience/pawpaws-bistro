@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7089744242670770455}
   - component: {fileID: 7792466780929257533}
   - component: {fileID: 4424911467001138323}
+  - component: {fileID: 4534575176833521383}
   m_Layer: 0
   m_Name: bottomBun
   m_TagString: Untagged
@@ -131,3 +132,15 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.16, y: 0.15}
   m_EdgeRadius: 0
+--- !u!114 &4534575176833521383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622644336963951163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aacc887731509e439c34d2e9bd87cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

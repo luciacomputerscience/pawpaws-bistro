@@ -1,9 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Analytics;
+using UnityEngine.Rendering;
 
 public class BinControl : MonoBehaviour
 {
+    [SerializeField] 
+    private InteractablesManager interactablesManager;
     public Transform bottomBunObj;
     public Transform topBunObj;
     public Transform cookedChickenObj;
@@ -32,33 +37,20 @@ public class BinControl : MonoBehaviour
 
     void OnMouseDown()
     {
-        if(gameObject.name == "MeatPatties")
+        if (interactablesManager == null)
+            interactablesManager = GameObject.Find("InteractablesManager").GetComponent<InteractablesManager>();
+        //if parent of gameobject is uncookable
+        //Send to plate
+        //Else send to inventory 
+        if (transform.parent.name == "Uncookable")
         {
-            if (gameplay.grillS1 == "empty")
-            {
-                Instantiate(bottomBunObj, new Vector2(-2, -.5f), bottomBunObj.rotation);
-                Instantiate(topBunObj, new Vector2(-2, -.4f), topBunObj.rotation);
-                gameplay.grillS1 = "full";
-            }
-            else if (gameplay.grillS2 == "empty")
-            {
-                Instantiate(bottomBunObj, new Vector2(-1, -.5f), bottomBunObj.rotation);
-                Instantiate(topBunObj, new Vector2(-1, -.4f), topBunObj.rotation);
-                gameplay.grillS2 = "full";
-            }
-            else if (gameplay.grillS3 == "empty")
-            {
-                Instantiate(bottomBunObj, new Vector2(0, -.5f), bottomBunObj.rotation);
-                Instantiate(topBunObj, new Vector2(0, -.4f), topBunObj.rotation);
-                gameplay.grillS3 = "full";
-            }
-            else if (gameplay.grillS4 == "empty")
-            {
-                Instantiate(bottomBunObj, new Vector2(1, -.5f), bottomBunObj.rotation);
-                Instantiate(topBunObj, new Vector2(1, -.4f), topBunObj.rotation);
-                gameplay.grillS4 = "full";
-            }         
-            
+            // put on the plate
+            Instantiate(lettuceObj, new Vector2(-2, -.5f), bottomBunObj.rotation, interactablesManager.transform);
+        }
+        else
+        {
+            //put in the inventory
+            Instantiate(rawMeatObj, new Vector2(-2, -.5f), bottomBunObj.rotation, interactablesManager.transform);
         }
     }
 }

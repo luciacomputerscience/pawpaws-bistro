@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3339888573103192274}
   - component: {fileID: 7144562657739260888}
   - component: {fileID: 6484286770637772467}
+  - component: {fileID: -3748262718417806165}
   m_Layer: 0
   m_Name: fries
   m_TagString: Untagged
@@ -131,3 +132,15 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
+--- !u!114 &-3748262718417806165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6196980019161036026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aacc887731509e439c34d2e9bd87cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

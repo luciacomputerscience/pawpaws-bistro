@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1700275450435747473}
   - component: {fileID: 1738476328270903958}
   - component: {fileID: -6549517556443419870}
+  - component: {fileID: 2524654387675075454}
   m_Layer: 0
   m_Name: topBun
   m_TagString: Untagged
@@ -145,3 +146,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseControlled: n
+--- !u!114 &2524654387675075454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5336801376161520988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aacc887731509e439c34d2e9bd87cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

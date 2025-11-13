@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4088315661443277642}
   - component: {fileID: 2483519878261692945}
   - component: {fileID: 1469151629618969642}
+  - component: {fileID: 996979733450468355}
   m_Layer: 0
   m_Name: onionRings
   m_TagString: Untagged
@@ -131,3 +132,15 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
+--- !u!114 &996979733450468355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6828213630535602019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aacc887731509e439c34d2e9bd87cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
