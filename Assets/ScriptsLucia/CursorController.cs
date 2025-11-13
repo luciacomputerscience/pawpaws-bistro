@@ -51,19 +51,19 @@ public class NewBehaviourScript : MonoBehaviour
     private void FindInteractableWithinDistanceThreshold()
     {
         newSelectionTransform = null;
+        Vector2 mouseScreen = controls.Mouse.Position.ReadValue<Vector2>();
 
-        for (int itemIndex = 0; itemIndex < interactablesManager.Interactables.Count; itemIndex++)
+        for (int i = 0; i < interactablesManager.Interactables.Count; i++)
         {
-            // Pythagoras
-            Vector3 fromMouseToInteractableOffset = interactablesManager.Interactables[itemIndex].position
-            - new Vector3(controls.Mouse.Position.ReadValue<Vector2>().x, controls.Mouse.Position.ReadValue<Vector2>().y, 0f);
+            Transform item = interactablesManager.Interactables[i];
+            Vector2 itemScreen = Camera.main.WorldToScreenPoint(item.position);
 
-            // SqrMag is the hypotenuse
-            float sqrMag = fromMouseToInteractableOffset.sqrMagnitude;
+            Vector2 delta = new Vector2(itemScreen.x - mouseScreen.x, itemScreen.y - mouseScreen.y);
+            float sqrMag = delta.sqrMagnitude;
 
             if (sqrMag < DistanceThreshold * DistanceThreshold)
             {
-                newSelectionTransform = interactablesManager.Interactables[itemIndex].transform;
+                newSelectionTransform = item;
 
                 if (cursorIsInteractive == false)
                 {
@@ -72,7 +72,6 @@ public class NewBehaviourScript : MonoBehaviour
                 break;
             }
         }
-
         if (currentSelectionTransform != newSelectionTransform)
         {
             currentSelectionTransform = newSelectionTransform;
