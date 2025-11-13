@@ -198,7 +198,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1211156029}
   - {fileID: 1496547649}
   - {fileID: 347118298}
   m_Father: {fileID: 0}
@@ -259,8 +258,10 @@ GameObject:
   - component: {fileID: 310240761}
   - component: {fileID: 310240762}
   - component: {fileID: 310240763}
+  - component: {fileID: 310240764}
+  - component: {fileID: 310240765}
   m_Layer: 0
-  m_Name: Cheese (2)
+  m_Name: BottomBun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -345,6 +346,66 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aacc887731509e439c34d2e9bd87cb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &310240764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310240760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99707eaf8296672408d7f419084dd6e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactablesManager: {fileID: 68589234}
+  foodItem: {fileID: 7089744242670770455, guid: 38dd4b83ed2bec0449cbefdd211395d4, type: 3}
+--- !u!61 &310240765
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310240760}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &340923178
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,6 +418,7 @@ GameObject:
   - component: {fileID: 340923181}
   - component: {fileID: 340923180}
   - component: {fileID: 340923182}
+  - component: {fileID: 340923183}
   m_Layer: 0
   m_Name: FishPatties
   m_TagString: Untagged
@@ -489,6 +551,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aacc887731509e439c34d2e9bd87cb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &340923183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340923178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99707eaf8296672408d7f419084dd6e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactablesManager: {fileID: 68589234}
+  foodItem: {fileID: 7175779445686830936, guid: da9738427d750d34ba2077dc7d1a016f, type: 3}
 --- !u!1 &347118297
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,6 +613,7 @@ GameObject:
   - component: {fileID: 492052842}
   - component: {fileID: 492052841}
   - component: {fileID: 492052843}
+  - component: {fileID: 492052844}
   m_Layer: 0
   m_Name: OnionRings
   m_TagString: Untagged
@@ -669,6 +746,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aacc887731509e439c34d2e9bd87cb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &492052844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492052839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99707eaf8296672408d7f419084dd6e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactablesManager: {fileID: 68589234}
+  foodItem: {fileID: 4088315661443277642, guid: e2d1511a64bb5e64387950cd2dd8fdee, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -772,10 +863,8 @@ GameObject:
   - component: {fileID: 674318303}
   - component: {fileID: 674318305}
   - component: {fileID: 674318304}
-  - component: {fileID: 674318306}
-  - component: {fileID: 674318308}
-  - component: {fileID: 674318307}
   - component: {fileID: 674318309}
+  - component: {fileID: 674318310}
   m_Layer: 0
   m_Name: MeatPatties
   m_TagString: Untagged
@@ -896,56 +985,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &674318306
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 674318302}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99707eaf8296672408d7f419084dd6e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactablesManager: {fileID: 0}
-  bottomBunObj: {fileID: 7089744242670770455, guid: 38dd4b83ed2bec0449cbefdd211395d4, type: 3}
-  topBunObj: {fileID: 1851050034045853744, guid: 7fa005d039927f34ba0116f0d76491ac, type: 3}
-  cookedChickenObj: {fileID: 623416408752934375, guid: 453fb01b909f71745926728ef520dbbd, type: 3}
-  rawChickenObj: {fileID: 8510808785878666014, guid: 0ae5e665d944cfe41bf3fd407373f068, type: 3}
-  cookedMeatObj: {fileID: 4855917713865558345, guid: ee26e7e681a059343a0912d6b06a31d2, type: 3}
-  rawMeatObj: {fileID: 4608684231240952177, guid: e986dd9703d0c43478c8f66eb0f2b274, type: 3}
-  cookedFishObj: {fileID: 1489570879729757108, guid: 6f8a6d3ee30b93f418018b4ecc5ade72, type: 3}
-  rawFishObj: {fileID: 7175779445686830936, guid: da9738427d750d34ba2077dc7d1a016f, type: 3}
-  friesObj: {fileID: 3339888573103192274, guid: 40fef50b62ac5134d92bd4ef8c3e35b7, type: 3}
-  onionRingsObj: {fileID: 4088315661443277642, guid: e2d1511a64bb5e64387950cd2dd8fdee, type: 3}
-  lettuceObj: {fileID: 7723126856480961776, guid: 1222a0ab948da0c4b93f1d50eaf1d827, type: 3}
-  tomatoesObj: {fileID: 2656315671446864369, guid: 767adc838e21d4243ad2d06254b741d6, type: 3}
-  cheeseObj: {fileID: 752039969794475739, guid: cf829a892189bdc4aa1413ce2aeb69d5, type: 3}
---- !u!114 &674318307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 674318302}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3aacc887731509e439c34d2e9bd87cb8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &674318308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 674318302}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c41f123352a2844d9bbb2904b5d3d51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &674318309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -958,6 +997,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aacc887731509e439c34d2e9bd87cb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &674318310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674318302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99707eaf8296672408d7f419084dd6e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactablesManager: {fileID: 68589234}
+  foodItem: {fileID: 4608684231240952177, guid: e986dd9703d0c43478c8f66eb0f2b274, type: 3}
 --- !u!1 &680114780
 GameObject:
   m_ObjectHideFlags: 0
@@ -969,6 +1022,8 @@ GameObject:
   - component: {fileID: 680114781}
   - component: {fileID: 680114782}
   - component: {fileID: 680114783}
+  - component: {fileID: 680114784}
+  - component: {fileID: 680114785}
   m_Layer: 0
   m_Name: TopBun
   m_TagString: Untagged
@@ -1055,6 +1110,66 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aacc887731509e439c34d2e9bd87cb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &680114784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680114780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99707eaf8296672408d7f419084dd6e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactablesManager: {fileID: 68589234}
+  foodItem: {fileID: 1851050034045853744, guid: 7fa005d039927f34ba0116f0d76491ac, type: 3}
+--- !u!61 &680114785
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680114780}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &884682100
 GameObject:
   m_ObjectHideFlags: 0
@@ -1067,6 +1182,7 @@ GameObject:
   - component: {fileID: 884682103}
   - component: {fileID: 884682102}
   - component: {fileID: 884682104}
+  - component: {fileID: 884682105}
   m_Layer: 0
   m_Name: Fries
   m_TagString: Untagged
@@ -1199,6 +1315,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aacc887731509e439c34d2e9bd87cb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &884682105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884682100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99707eaf8296672408d7f419084dd6e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactablesManager: {fileID: 68589234}
+  foodItem: {fileID: 3339888573103192274, guid: 40fef50b62ac5134d92bd4ef8c3e35b7, type: 3}
 --- !u!1 &1192735828
 GameObject:
   m_ObjectHideFlags: 0
@@ -1243,64 +1373,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1211156028
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1211156029}
-  - component: {fileID: 1211156030}
-  m_Layer: 0
-  m_Name: Bins
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1211156029
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1211156028}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.5016365, y: -3.4035792, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 68589233}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1211156030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1211156028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99707eaf8296672408d7f419084dd6e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactablesManager: {fileID: 68589234}
-  bottomBunObj: {fileID: 7089744242670770455, guid: 38dd4b83ed2bec0449cbefdd211395d4, type: 3}
-  topBunObj: {fileID: 1851050034045853744, guid: 7fa005d039927f34ba0116f0d76491ac, type: 3}
-  cookedChickenObj: {fileID: 623416408752934375, guid: 453fb01b909f71745926728ef520dbbd, type: 3}
-  rawChickenObj: {fileID: 8510808785878666014, guid: 0ae5e665d944cfe41bf3fd407373f068, type: 3}
-  cookedMeatObj: {fileID: 4855917713865558345, guid: ee26e7e681a059343a0912d6b06a31d2, type: 3}
-  rawMeatObj: {fileID: 4608684231240952177, guid: e986dd9703d0c43478c8f66eb0f2b274, type: 3}
-  cookedFishObj: {fileID: 1489570879729757108, guid: 6f8a6d3ee30b93f418018b4ecc5ade72, type: 3}
-  rawFishObj: {fileID: 7175779445686830936, guid: da9738427d750d34ba2077dc7d1a016f, type: 3}
-  friesObj: {fileID: 3339888573103192274, guid: 40fef50b62ac5134d92bd4ef8c3e35b7, type: 3}
-  onionRingsObj: {fileID: 4088315661443277642, guid: e2d1511a64bb5e64387950cd2dd8fdee, type: 3}
-  lettuceObj: {fileID: 7723126856480961776, guid: 1222a0ab948da0c4b93f1d50eaf1d827, type: 3}
-  tomatoesObj: {fileID: 2656315671446864369, guid: 767adc838e21d4243ad2d06254b741d6, type: 3}
-  cheeseObj: {fileID: 752039969794475739, guid: cf829a892189bdc4aa1413ce2aeb69d5, type: 3}
 --- !u!1 &1269566742
 GameObject:
   m_ObjectHideFlags: 0
@@ -1312,6 +1384,8 @@ GameObject:
   - component: {fileID: 1269566743}
   - component: {fileID: 1269566744}
   - component: {fileID: 1269566745}
+  - component: {fileID: 1269566746}
+  - component: {fileID: 1269566747}
   m_Layer: 0
   m_Name: Cheese
   m_TagString: Untagged
@@ -1398,6 +1472,66 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aacc887731509e439c34d2e9bd87cb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1269566746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269566742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99707eaf8296672408d7f419084dd6e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactablesManager: {fileID: 68589234}
+  foodItem: {fileID: 752039969794475739, guid: cf829a892189bdc4aa1413ce2aeb69d5, type: 3}
+--- !u!61 &1269566747
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269566742}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1496547648
 GameObject:
   m_ObjectHideFlags: 0
@@ -1407,7 +1541,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1496547649}
-  - component: {fileID: 1496547650}
   m_Layer: 0
   m_Name: Uncookable
   m_TagString: Untagged
@@ -1435,18 +1568,6 @@ Transform:
   - {fileID: 1269566743}
   m_Father: {fileID: 68589233}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1496547650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1496547648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3aacc887731509e439c34d2e9bd87cb8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1669945824
 GameObject:
   m_ObjectHideFlags: 0
@@ -1458,7 +1579,8 @@ GameObject:
   - component: {fileID: 1669945825}
   - component: {fileID: 1669945826}
   - component: {fileID: 1669945828}
-  - component: {fileID: 1669945827}
+  - component: {fileID: 1669945829}
+  - component: {fileID: 1669945830}
   m_Layer: 0
   m_Name: Tomato
   m_TagString: Untagged
@@ -1533,18 +1655,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1669945827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1669945824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3aacc887731509e439c34d2e9bd87cb8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1669945828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1557,6 +1667,66 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aacc887731509e439c34d2e9bd87cb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1669945829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669945824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99707eaf8296672408d7f419084dd6e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactablesManager: {fileID: 68589234}
+  foodItem: {fileID: 2656315671446864369, guid: 767adc838e21d4243ad2d06254b741d6, type: 3}
+--- !u!61 &1669945830
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669945824}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1942481058
 GameObject:
   m_ObjectHideFlags: 0
@@ -1568,6 +1738,8 @@ GameObject:
   - component: {fileID: 1942481059}
   - component: {fileID: 1942481060}
   - component: {fileID: 1942481061}
+  - component: {fileID: 1942481062}
+  - component: {fileID: 1942481063}
   m_Layer: 0
   m_Name: Lettuce
   m_TagString: Untagged
@@ -1654,6 +1826,66 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aacc887731509e439c34d2e9bd87cb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1942481062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942481058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99707eaf8296672408d7f419084dd6e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactablesManager: {fileID: 68589234}
+  foodItem: {fileID: 7723126856480961776, guid: 1222a0ab948da0c4b93f1d50eaf1d827, type: 3}
+--- !u!61 &1942481063
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942481058}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &2022463982
 GameObject:
   m_ObjectHideFlags: 0
@@ -1797,6 +2029,7 @@ GameObject:
   - component: {fileID: 2029343164}
   - component: {fileID: 2029343163}
   - component: {fileID: 2029343165}
+  - component: {fileID: 2029343166}
   m_Layer: 0
   m_Name: ChickenPatties
   m_TagString: Untagged
@@ -1929,6 +2162,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aacc887731509e439c34d2e9bd87cb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2029343166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029343161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99707eaf8296672408d7f419084dd6e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactablesManager: {fileID: 68589234}
+  foodItem: {fileID: 8510808785878666014, guid: 0ae5e665d944cfe41bf3fd407373f068, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
