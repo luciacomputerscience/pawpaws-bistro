@@ -30,7 +30,6 @@ public class Item : MonoBehaviour
         currentSlot = slot;
         transform.position = slot.transform.position;
         transform.rotation = slot.transform.rotation;
-        onCookingSurface = true;
         StartTimer();
     }
 
@@ -41,7 +40,7 @@ public class Item : MonoBehaviour
     {
         StopTimer();
         onCookingSurface = false;
-
+        Debug.Log("At Item.EndCook: OCS = TRUE");
         float diff = cookTime - cookedTime;
         string note;
 
@@ -53,12 +52,5 @@ public class Item : MonoBehaviour
 
         Debug.Log($"{itemName}: {note}" + ". Command sent from EndCook in Item.cs");
         return note;
-    }
-
-    public void RemoveFromSlot()
-    {
-        currentSlot?.ClearSlot();
-        currentSlot = null;
-        onCookingSurface = false;
     }
 }

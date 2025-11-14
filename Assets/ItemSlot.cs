@@ -46,6 +46,7 @@ public class ItemSlot : MonoBehaviour
                 bool sent = CookStationControl.Instance.ReceiveItem(currentItem);
                 if (sent)
                 {
+                    currentItem.onCookingSurface = true;
                     ClearSlot();
                 }
             }    
@@ -61,6 +62,7 @@ public class ItemSlot : MonoBehaviour
                 bool sent = InventoryManager.Instance.AddItem(currentItem);
                 if (sent)
                 {
+                    currentItem.onCookingSurface = false;
                     ClearSlot();
                 }
             }
@@ -71,7 +73,6 @@ public class ItemSlot : MonoBehaviour
         if(currentItem != null)
         {
             currentItem.StopTimer();
-            currentItem.onCookingSurface = false;
             currentItem = null;
             isFull = false;
         }
