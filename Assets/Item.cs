@@ -29,7 +29,6 @@ public class Item : MonoBehaviour
     {
         currentSlot = slot;
         transform.position = slot.transform.position;
-        // this.transform.localScale = new Vector2(2, 2);
         transform.rotation = slot.transform.rotation;
         onCookingSurface = true;
         StartTimer();
@@ -52,7 +51,7 @@ public class Item : MonoBehaviour
         else if(diff < -1f && diff > -3f) note = "Slightly Overcooked!";
         else note = "Overcooked!";
 
-        Debug.Log($"{itemName}: {note}");
+        Debug.Log($"{itemName}: {note}" + ". Command sent from EndCook in Item.cs");
         return note;
     }
 

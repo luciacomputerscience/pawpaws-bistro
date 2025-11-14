@@ -13,12 +13,12 @@ public class CookStationControl : MonoBehaviour
         {
             if(slot.AddItem(item))
             {
-                Debug.Log($"Placed {item.ItemName} on slot {slot.name}");
+                Debug.Log($"Placed {item.ItemName} on slot {slot.name}" + ". Command sent from RecieveItem in CookStationControl.cs");
                 return true;
             }
         }
 
-        Debug.Log("No slots available!");
+        Debug.Log("No slots available!" + ". Command sent from RecieveItem in CookStationControl.cs");
         return false;
     }
 }

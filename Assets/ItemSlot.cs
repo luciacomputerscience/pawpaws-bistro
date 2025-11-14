@@ -10,10 +10,21 @@ public class ItemSlot : MonoBehaviour
         if(currentItem == null)
         {
             currentItem = item;
-            Debug.Log("added" + item.name + "to slot");
-            item.SnapToSlot(this);
-            isFull = true;
-            return true;
+            Debug.Log("CurrItemTag:" + item.tag +" | CurrSlotTag:" + this.tag);
+            if ((item.tag != ("Need" + this.tag)) && (this.tag != "Untagged"))
+            {
+                Debug.Log("Item does not belong here.");
+                Debug.Log(item);
+                ClearSlot();
+                return false;
+            }
+            else
+            {
+                Debug.Log("added" + item.name + "to "+ this.name + ". Command sent from AddItem in ItemSlot.cs");
+                item.SnapToSlot(this);
+                isFull = true;
+                return true;
+            }            
         }
         else
         {
@@ -24,7 +35,7 @@ public class ItemSlot : MonoBehaviour
 
     public void OnMouseDown()
     {
-        Debug.Log("Clicked slot: " + this.name +"Holding:" + currentItem);
+        Debug.Log("Clicked slot: " + this.name +"Holding:" + currentItem + ". Command sent from OnMouseDown in ItemSlot.cs");
         if (transform.parent.name == "InventoryCanvas") {
             if (isFull==false)
             {
@@ -39,6 +50,21 @@ public class ItemSlot : MonoBehaviour
                 }
             }    
         } 
+        else if (transform.parent.parent.name == "Stations")
+        {
+            if (isFull==false)
+            {
+                return;
+            }
+            else
+            {
+                bool sent = InventoryManager.Instance.AddItem(currentItem);
+                if (sent)
+                {
+                    ClearSlot();
+                }
+            }
+        }
     }
     public void ClearSlot()
     {

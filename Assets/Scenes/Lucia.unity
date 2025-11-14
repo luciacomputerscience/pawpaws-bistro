@@ -253,7 +253,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 535517c5c9c606649b08bfced33b25a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items: []
   itemSlot:
   - {fileID: 7508938342786600185}
   - {fileID: 613951250}
@@ -340,8 +339,6 @@ GameObject:
   m_Component:
   - component: {fileID: 288452408}
   - component: {fileID: 288452407}
-  - component: {fileID: 288452406}
-  - component: {fileID: 288452405}
   m_Layer: 0
   m_Name: GrillCanvas
   m_TagString: Untagged
@@ -349,37 +346,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &288452405
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 288452404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c73bd496dac3fe4e9ca566f5df0c4c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stationSlots:
-  - {fileID: 1374498150}
-  - {fileID: 1495705846}
-  - {fileID: 2115423018}
-  - {fileID: 498252845}
---- !u!114 &288452406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 288452404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 535517c5c9c606649b08bfced33b25a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  items: []
-  itemSlot: []
 --- !u!212 &288452407
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -441,7 +407,7 @@ Transform:
   m_GameObject: {fileID: 288452404}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.03, z: 0}
+  m_LocalPosition: {x: -4.98, y: 0, z: 0}
   m_LocalScale: {x: 3.63, y: 3.63, z: 0.726}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -449,7 +415,7 @@ Transform:
   - {fileID: 1495705847}
   - {fileID: 2115423019}
   - {fileID: 498252846}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 482808636}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &310240760
 GameObject:
@@ -769,6 +735,59 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactablesManager: {fileID: 68589234}
   foodItem: {fileID: 4698751691192490456, guid: 6ba121a4e5be3004496c3c52f727bb24, type: 3}
+--- !u!1 &482808635
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 482808636}
+  - component: {fileID: 482808637}
+  m_Layer: 0
+  m_Name: Stations
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &482808636
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482808635}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.98, y: -1.03, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 288452408}
+  - {fileID: 1505142956}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &482808637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482808635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c73bd496dac3fe4e9ca566f5df0c4c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stationSlots:
+  - {fileID: 1374498150}
+  - {fileID: 1495705846}
+  - {fileID: 2115423018}
+  - {fileID: 498252845}
+  - {fileID: 1290311018}
+  - {fileID: 1627968486}
 --- !u!1 &492052839
 GameObject:
   m_ObjectHideFlags: 0
@@ -2204,8 +2223,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1505142956}
   - component: {fileID: 1505142955}
-  - component: {fileID: 1505142954}
-  - component: {fileID: 1505142953}
   m_Layer: 0
   m_Name: FryerCanvas
   m_TagString: Untagged
@@ -2213,35 +2230,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1505142953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1505142952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c73bd496dac3fe4e9ca566f5df0c4c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stationSlots:
-  - {fileID: 1290311018}
-  - {fileID: 1627968486}
---- !u!114 &1505142954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1505142952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 535517c5c9c606649b08bfced33b25a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  items: []
-  itemSlot: []
 --- !u!212 &1505142955
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2303,13 +2291,13 @@ Transform:
   m_GameObject: {fileID: 1505142952}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.98, y: -1.03, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3.63, y: 3.63, z: 0.726}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1290311019}
   - {fileID: 1627968487}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 482808636}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1627968485
 PrefabInstance:
@@ -3104,6 +3092,5 @@ SceneRoots:
   - {fileID: 28341639}
   - {fileID: 68589233}
   - {fileID: 155132706}
-  - {fileID: 288452408}
-  - {fileID: 1505142956}
+  - {fileID: 482808636}
   - {fileID: 1293790507}

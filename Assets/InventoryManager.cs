@@ -6,8 +6,6 @@ public class InventoryManager : MonoBehaviour
     public static InventoryManager Instance;
 
     private void Awake() => Instance = this;
-
-    public List<Item> items = new List<Item>();
     public ItemSlot[] itemSlot;
 
     public bool AddItem(Item item)
@@ -16,28 +14,11 @@ public class InventoryManager : MonoBehaviour
         {
             if(itemSlot[i].isFull == false)
             {
-                Debug.Log(itemSlot[i]);
+                Debug.Log(itemSlot[i] + ". Command sent from AddItem in InventoryManager.cs");
                 itemSlot[i].AddItem(item);
                 return true;
             }
         }
         return false;
-        // 
-        // items.Add(item);
-        // item.transform.parent = inventoryParent;  // optional: snap to inventory container
-        // item.transform.localPosition = Vector3.zero;
-        // item.StopTimer();
-        // item.onCookingSurface = false;
-        // return true;
     }
-// 
-    // public bool RemoveItem(Item item)
-    // {
-        // if(items.Contains(item))
-        // {
-            // items.Remove(item);
-            // return true;
-        // }
-        // return false;
-    // }
 }
