@@ -10,7 +10,7 @@ public class Foods : MonoBehaviour
     public float cookTime;
     public float cookedTime = 0f;
     public bool CorrectCookingSurface = false;
-    private bool timerRunning = false;
+    public bool timerRunning = false;
 
     public void StartAndStop()
     {
@@ -63,13 +63,21 @@ public class Foods : MonoBehaviour
     }
     public void EndCook()
     {
-
         Score();
+        Destroy(gameObject);
+    }
 
+   
+    
+
+    public void OnMouseUpAsButton()
+    {
+        EndCook();
     }
     public string Score()
     {
         float score = cookTime - cookedTime;
+
         Debug.Log(score);
         Debug.Log(cookTime);
         if (score <= 1f && score >= -1f)

@@ -71,4 +71,41 @@ public class Fryer : MonoBehaviour
             editfood2.StartAndStop();
         }
     }
+
+    public void StartTimer()
+    {
+        if (editfood1.timerRunning == false)
+        {
+            editfood1.timerRunning = true;
+        }
+        if (editfood2.timerRunning == false)
+        {
+            editfood2.timerRunning = true;
+        }
+    }
+
+    public void StopTimer()
+    {
+        if (editfood1.timerRunning == true)
+        {
+            editfood1.timerRunning = false;
+        }
+        if (editfood2.timerRunning == true)
+        {
+            editfood2.timerRunning = false;
+        }
+    }
+    public void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject == food1)
+        {
+            check1 = false;
+            Debug.Log("Successfully removed item1 from fryer.");
+        }
+        else if (other.gameObject == food2)
+        {
+            check2 = false;
+            Debug.Log("Successfully removed item2 from fryer.");
+        }
+    }
 }
