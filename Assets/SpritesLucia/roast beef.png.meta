@@ -152,7 +152,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      roast beef_0: -8312283845176955612
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

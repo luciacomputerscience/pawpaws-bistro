@@ -7,6 +7,10 @@ public class Item : MonoBehaviour
     [SerializeField]
     private string itemName;
     [SerializeField]
+    private float cookTime;
+    [SerializeField]
+    private string allergen;
+    [SerializeField]
     private Sprite sprite;
     public Sprite Sprite => sprite;
     public string ItemName => itemName;

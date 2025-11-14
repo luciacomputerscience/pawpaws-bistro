@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2654767041828764464}
   m_Layer: 0
   m_Name: RawFriesItem
-  m_TagString: Untagged
+  m_TagString: NeedFrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,6 +93,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: RawFries
+  cookTime: 8
+  allergen: N/A
   sprite: {fileID: 21300000, guid: fc1e855b381025f40896857c310c1808, type: 3}
 --- !u!1 &8704113023240346656
 GameObject:

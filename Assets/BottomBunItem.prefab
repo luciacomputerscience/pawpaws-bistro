@@ -177,4 +177,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: BottomBunItem
+  cookTime: 1000
+  allergen: N/A
   sprite: {fileID: -6412762683731264431, guid: 4cce527d2062c284696bb1c451b8f918, type: 3}

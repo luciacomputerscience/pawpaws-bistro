@@ -152,7 +152,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      dm-08-fish-blue_0: -6982350260640849486
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

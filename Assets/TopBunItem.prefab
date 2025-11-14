@@ -93,6 +93,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: TopBunItem
+  cookTime: 1000
+  allergen: N/A
   sprite: {fileID: 5541253663642590004, guid: 7b300cd09a2c2164cad61476e195cbf1, type: 3}
 --- !u!1 &5805862701897214873
 GameObject:

@@ -93,6 +93,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Lettuce
+  cookTime: 1000
+  allergen: N/A
   sprite: {fileID: 1690590727720155478, guid: 56b981d6ee465bf45bc20fb603a6d744, type: 3}
 --- !u!1 &1467993354964991868
 GameObject:

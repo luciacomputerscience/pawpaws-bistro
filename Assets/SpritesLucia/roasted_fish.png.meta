@@ -152,7 +152,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      roasted_fish_0: 1768906781875500697
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

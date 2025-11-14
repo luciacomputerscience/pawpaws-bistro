@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4781826064612895753}
   m_Layer: 0
   m_Name: RawOnionRingsItem
-  m_TagString: Untagged
+  m_TagString: NeedFrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,6 +93,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: RawOnionRings
+  cookTime: 8
+  allergen: N/A
   sprite: {fileID: -4421439950884502888, guid: 05910d0877bc83243a640c2a48819238, type: 3}
 --- !u!1 &4530492587321528848
 GameObject:

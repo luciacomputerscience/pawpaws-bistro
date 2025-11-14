@@ -93,6 +93,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: CookedMeat
+  cookTime: 1000
+  allergen: N/A
   sprite: {fileID: -8312283845176955612, guid: d044f4d896476924b896a0819ce3fedc, type: 3}
 --- !u!1 &7952743550253790419
 GameObject:

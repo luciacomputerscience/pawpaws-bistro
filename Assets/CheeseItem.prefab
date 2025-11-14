@@ -177,4 +177,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Cheese
+  cookTime: 1000
+  allergen: N/A
   sprite: {fileID: -4356574908909991440, guid: 3fe86f856265b744e9836c550e9c543d, type: 3}

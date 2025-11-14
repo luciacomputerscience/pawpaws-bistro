@@ -189,5 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe336393fd7a50f4eae7f1ef338812f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: CookedFries
+  cookTime: 1000
+  allergen: N/A
   sprite: {fileID: 0}

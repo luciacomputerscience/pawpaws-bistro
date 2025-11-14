@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 2268129893521379256}
   m_Layer: 0
   m_Name: RawMeatItem
-  m_TagString: Untagged
+  m_TagString: NeedGrill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -177,4 +177,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: RawMeat
+  cookTime: 10
+  allergen: N/A
   sprite: {fileID: -1292103146064027224, guid: e26a1a27d4b66e74992c44363e5a2cb4, type: 3}
