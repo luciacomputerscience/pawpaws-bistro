@@ -37,23 +37,8 @@ public class InteractablesManager : MonoBehaviour
     void Start()
     {
         mainCamera = Camera.main;
-
-        AllChildrenWorldToScreenPoint();
-    }
-
-    private void AllChildrenWorldToScreenPoint()
-    {
-        for (int i = 0; i <this.transform.childCount; i++)
-        {
-            transform.GetChild(i).position = mainCamera.WorldToScreenPoint(transform.GetChild(i).position);
-
-            transform.GetChild(i).localScale = Vector3.one * 100;
-        }
     }
 }
-
-
-
 
 
 
