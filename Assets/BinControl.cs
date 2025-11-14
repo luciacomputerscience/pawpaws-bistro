@@ -9,42 +9,31 @@ public class BinControl : MonoBehaviour
 {
     [SerializeField] 
     private InteractablesManager interactablesManager;
+    private InventoryManager inventoryManager;
     public Transform foodItem;
 
-    // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        interactablesManager = GameObject.Find("InteractablesManager").GetComponent<InteractablesManager>();
+        inventoryManager = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>();
     }
 
     void OnMouseDown()
     {
-        if (interactablesManager == null)
+        Item item = foodItem.GetComponent<Item>();
+        string parentCategory = transform.parent.name;
+
+        bool added = inventoryManager.AddItem(item.ItemName, item.Sprite);
+
+        if (!added)
         {
-            interactablesManager = GameObject.Find("InteractablesManager").GetComponent<InteractablesManager>();
-        }
-        if (foodItem == null)
-        {
-            Debug.LogWarning($"No prefab assigned to {name}!");
+            Debug.Log("Inventory FULL");
             return;
         }
-        Debug.Log($"{name}'s parent is {transform.parent.name}");
 
-        if (transform.parent.name == "Uncookable")
-        {
-            // put on the plate
-            Instantiate(foodItem, new Vector2(-2, -.5f), foodItem.rotation, interactablesManager.transform);
-        }
-        else
-        {
-            //put in the inventory
-            Instantiate(foodItem, new Vector2(-2, -.5f), foodItem.rotation, interactablesManager.transform);
-        }
+        // Only spawn it if added successfully
+        GameObject spawnedItem = Instantiate(foodItem.gameObject, interactablesManager.transform);
     }
+
+
 }
