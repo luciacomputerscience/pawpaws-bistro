@@ -21,8 +21,6 @@ public class BinControl : MonoBehaviour
     void OnMouseDown()
     {
         Item item = foodItem.GetComponent<Item>();
-        string parentCategory = transform.parent.name;
-
         bool added = inventoryManager.AddItem(item.ItemName, item.Sprite);
 
         if (!added)
@@ -30,8 +28,6 @@ public class BinControl : MonoBehaviour
             Debug.Log("Inventory FULL");
             return;
         }
-
-        // Only spawn it if added successfully
         GameObject spawnedItem = Instantiate(foodItem.gameObject, interactablesManager.transform);
     }
 
