@@ -1,75 +1,65 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    [SerializeField]
-    private string itemName;
-    [SerializeField]
-    private float cookTime;
-    [SerializeField]
-    private string allergen;
-    [SerializeField]
-    private Sprite sprite;
+    [Header("Item Info")]
+    [SerializeField] private string itemName;
+    [SerializeField] private float cookTime;
+    [SerializeField] private string allergen;
+    [SerializeField] private Sprite sprite;
 
-    public Sprite Sprite => sprite;
     public string ItemName => itemName;
+    public Sprite Sprite => sprite;
 
+    [Header("Cooking State")]
+    public bool onCookingSurface = false;
+    public bool timerRunning = false;
     private float cookedTime = 0f;
-    private bool correctCookingSurface = false;
-    private bool timerRunning = false;
 
-    private InventoryManager inventoryManager;
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        inventoryManager = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>();
-    }
+    private ItemSlot currentSlot;
 
     private void Update()
     {
-        if (timerRunning && correctCookingSurface)
+        if(timerRunning && onCookingSurface)
             cookedTime += Time.deltaTime;
     }
 
-    public void StartAndStop()
+    public void SnapToSlot(ItemSlot slot)
     {
-        timerRunning = !timerRunning;
-        if (!timerRunning)
-            Score();
+        currentSlot = slot;
+        transform.position = slot.transform.position;
+        // this.transform.localScale = new Vector2(2, 2);
+        transform.rotation = slot.transform.rotation;
+        onCookingSurface = true;
+        StartTimer();
     }
 
     public void StartTimer() => timerRunning = true;
     public void StopTimer() => timerRunning = false;
-    public void SetCookingSurface(bool isCorrect) => correctCookingSurface = isCorrect;
 
-    public void EndCook()
+    public string EndCook()
     {
-        Score();
-        Destroy(gameObject);
+        StopTimer();
+        onCookingSurface = false;
+
+        float diff = cookTime - cookedTime;
+        string note;
+
+        if(diff <= 1f && diff >= -1f) note = "Perfectly cooked!";
+        else if(diff < 3f && diff > 1f) note = "Slightly Undercooked!";
+        else if(diff > 3f) note = "Undercooked!";
+        else if(diff < -1f && diff > -3f) note = "Slightly Overcooked!";
+        else note = "Overcooked!";
+
+        Debug.Log($"{itemName}: {note}");
+        return note;
     }
 
-    public string Score()
+    public void RemoveFromSlot()
     {
-        float difference = cookTime - cookedTime;
-
-        if (difference <= 1f && difference >= -1f)
-            return "Perfectly cooked!";
-        else if (difference < 3f && difference > 1f)
-            return "Slightly Undercooked!";
-        else if (difference > 3f)
-            return "Undercooked!";
-        else if (difference < -1f && difference > -3f)
-            return "Slightly Overcooked!";
-        else
-            return "Overcooked!";
+        currentSlot?.RemoveItem();
+        currentSlot = null;
+        onCookingSurface = false;
     }
-// 
-    // private void OnMouseUpAsButton()
-    // {
-        // EndCook();
-    // }
 }

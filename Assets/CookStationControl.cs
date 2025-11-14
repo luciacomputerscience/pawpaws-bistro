@@ -1,32 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using System;
 
 public class CookStationControl : MonoBehaviour
 {
     public static CookStationControl Instance;
-
     public ItemSlot[] stationSlots;
 
-    private void Awake()
-    {
-        Instance = this;
-    }
+    private void Awake() => Instance = this;
 
-    public bool ReceiveItem(string itemName, Sprite itemSprite)
+    public bool ReceiveItem(Item item)
     {
-        foreach (var slot in stationSlots)
+        foreach(var slot in stationSlots)
         {
-            if (slot.isFull == false)
+            if(slot.AddItem(item))
             {
-                slot.AddItem(itemName, itemSprite);
-                Debug.Log("Sent" + itemName + " to grill slot!");
+                Debug.Log($"Placed {item.ItemName} on slot {slot.name}");
                 return true;
             }
         }
 
-        Debug.Log("No grill slots available!");
+        Debug.Log("No slots available!");
         return false;
     }
 }

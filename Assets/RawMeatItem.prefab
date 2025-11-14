@@ -112,7 +112,7 @@ Transform:
   m_GameObject: {fileID: 6093601515569598857}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 981.7157, y: 523.522, z: -27.011917}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -181,6 +181,8 @@ MonoBehaviour:
   cookTime: 10
   allergen: N/A
   sprite: {fileID: -1292103146064027224, guid: e26a1a27d4b66e74992c44363e5a2cb4, type: 3}
+  onCookingSurface: 0
+  timerRunning: 0
 --- !u!114 &7700358030306480947
 MonoBehaviour:
   m_ObjectHideFlags: 0

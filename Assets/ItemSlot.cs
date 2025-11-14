@@ -1,52 +1,42 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
 public class ItemSlot : MonoBehaviour
 {
-    //==ITEM DATA==//
-    public string itemName;
-    public Sprite itemSprite;
+    public Item currentItem;
     public bool isFull;
-    //==ITEM SLOT==//
-    [SerializeField]
-    private Image itemImage;
 
-    public void AddItem(string itemName, Sprite itemSprite)
+    public bool AddItem(Item item)
     {
-        this.itemName = itemName;
-        this.itemSprite = itemSprite;
-        isFull = true;
-
-        itemImage.sprite = itemSprite;
-    }
-    public void ClearSlot()
+        if(currentItem == null)
         {
-            itemName = null;
-            itemSprite = null;
-            isFull = false;
-            itemImage.sprite = null;
+            currentItem = item;
+            item.SnapToSlot(this);
+            isFull = true;
+            return true;
         }
-
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        Debug.Log("Clicked slot: " + itemName);
-        if (transform.parent.name == "InventoryCanvas") {
-            
-            if (isFull==false)
-            {
-                return;
-            }
-            else
-            {
-                bool sent = CookStationControl.Instance.ReceiveItem(itemName, itemSprite);
-                if (sent)
-                {
-                    ClearSlot();
-                }
-            }    
-        } 
+        else
+        {
+            Debug.Log("Slot full!");
+            return false;
+        }
     }
+
+    public void RemoveItem()
+    {
+        if(currentItem != null)
+        {
+            currentItem.StopTimer();
+            currentItem.onCookingSurface = false;
+            currentItem = null;
+        }
+    }
+
+    // private void OnMouseDown()
+    // {
+        // if(currentItem != null)
+        // {
+            // InventoryManager.Instance.AddItem(currentItem);
+            // RemoveItem();
+        // }
+    // }
 }
