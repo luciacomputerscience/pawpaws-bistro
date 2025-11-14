@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ItemSlot : MonoBehaviour, IPointerClickHandler
+public class ItemSlot : MonoBehaviour
 {
     //==ITEM DATA==//
     public string itemName;
@@ -33,7 +33,8 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         Debug.Log("Clicked slot: " + itemName);
-        if (transform.parent.name == "InventorySlots") {
+        if (transform.parent.name == "InventoryCanvas") {
+            
             if (isFull==false)
             {
                 return;

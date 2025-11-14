@@ -95,9 +95,10 @@ GameObject:
   - component: {fileID: 2507023390363673326}
   - component: {fileID: 6608207994944846319}
   - component: {fileID: 4419958658108720319}
+  - component: {fileID: -5115291548040652483}
   m_Layer: 0
   m_Name: CheeseItem
-  m_TagString: Untagged
+  m_TagString: NeedPlate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -180,3 +181,15 @@ MonoBehaviour:
   cookTime: 1000
   allergen: N/A
   sprite: {fileID: -4356574908909991440, guid: 3fe86f856265b744e9836c550e9c543d, type: 3}
+--- !u!114 &-5115291548040652483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6463817828156602230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aacc887731509e439c34d2e9bd87cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

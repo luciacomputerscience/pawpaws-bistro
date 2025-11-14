@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 8533353932712087419}
   - component: {fileID: 2964944392242238481}
   - component: {fileID: 3178818948755073874}
+  - component: {fileID: -5499456353642088125}
   m_Layer: 0
   m_Name: CookedFishItem
-  m_TagString: Untagged
+  m_TagString: NeedPlate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,6 +97,18 @@ MonoBehaviour:
   cookTime: 1000
   allergen: N/A
   sprite: {fileID: 1768906781875500697, guid: a8eeb234cd0affe4c8191d3f628298e9, type: 3}
+--- !u!114 &-5499456353642088125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5037336302070171738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aacc887731509e439c34d2e9bd87cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6933989811033389300
 GameObject:
   m_ObjectHideFlags: 0

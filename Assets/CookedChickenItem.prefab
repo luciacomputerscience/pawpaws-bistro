@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 2267274071865657153}
   - component: {fileID: 4613253242676990084}
   - component: {fileID: 7067746912276445416}
+  - component: {fileID: -3002013039983834367}
   m_Layer: 0
   m_Name: CookedChickenItem
-  m_TagString: Untagged
+  m_TagString: NeedPlate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,6 +97,18 @@ MonoBehaviour:
   cookTime: 1000
   allergen: N/A
   sprite: {fileID: -1019360793386949115, guid: 25f29ac4584c43a42bd596cc13f3e97e, type: 3}
+--- !u!114 &-3002013039983834367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4278625543769521795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aacc887731509e439c34d2e9bd87cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5238473969072671175
 GameObject:
   m_ObjectHideFlags: 0

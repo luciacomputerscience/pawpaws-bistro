@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 3203799645810166610}
   - component: {fileID: 9140361185330676441}
   - component: {fileID: 2268129893521379256}
+  - component: {fileID: 7700358030306480947}
   m_Layer: 0
   m_Name: RawMeatItem
   m_TagString: NeedGrill
@@ -180,3 +181,15 @@ MonoBehaviour:
   cookTime: 10
   allergen: N/A
   sprite: {fileID: -1292103146064027224, guid: e26a1a27d4b66e74992c44363e5a2cb4, type: 3}
+--- !u!114 &7700358030306480947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6093601515569598857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aacc887731509e439c34d2e9bd87cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

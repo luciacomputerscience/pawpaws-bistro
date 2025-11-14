@@ -95,9 +95,10 @@ GameObject:
   - component: {fileID: 6308891003528854619}
   - component: {fileID: 5061896727476026566}
   - component: {fileID: 1165136309771378550}
+  - component: {fileID: -4644484099961676891}
   m_Layer: 0
   m_Name: TomatoesItem
-  m_TagString: Untagged
+  m_TagString: NeedPlate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -180,3 +181,15 @@ MonoBehaviour:
   cookTime: 1000
   allergen: N/A
   sprite: {fileID: 21300000, guid: 82a84bab3bdd3074491595bcaec038a4, type: 3}
+--- !u!114 &-4644484099961676891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6584630111178179748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aacc887731509e439c34d2e9bd87cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

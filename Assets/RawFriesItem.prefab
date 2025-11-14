@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 25214652571880286}
   - component: {fileID: 7354629545471142968}
   - component: {fileID: 2654767041828764464}
+  - component: {fileID: 1660894353591796813}
   m_Layer: 0
   m_Name: RawFriesItem
   m_TagString: NeedFrier
@@ -96,6 +97,18 @@ MonoBehaviour:
   cookTime: 8
   allergen: N/A
   sprite: {fileID: 21300000, guid: fc1e855b381025f40896857c310c1808, type: 3}
+--- !u!114 &1660894353591796813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7289453227804494988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aacc887731509e439c34d2e9bd87cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8704113023240346656
 GameObject:
   m_ObjectHideFlags: 0

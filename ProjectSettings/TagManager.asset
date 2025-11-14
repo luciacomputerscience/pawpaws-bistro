@@ -6,6 +6,7 @@ TagManager:
   tags:
   - NeedFrier
   - NeedGrill
+  - NeedPlate
   layers:
   - Default
   - TransparentFX

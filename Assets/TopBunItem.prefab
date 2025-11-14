@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 7219212878929012304}
   - component: {fileID: 3333132454539685624}
   - component: {fileID: 6648057159317870269}
+  - component: {fileID: -497715451141226317}
   m_Layer: 0
   m_Name: TopBunItem
-  m_TagString: Untagged
+  m_TagString: NeedPlate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,6 +97,18 @@ MonoBehaviour:
   cookTime: 1000
   allergen: N/A
   sprite: {fileID: 5541253663642590004, guid: 7b300cd09a2c2164cad61476e195cbf1, type: 3}
+--- !u!114 &-497715451141226317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5662388132487444927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aacc887731509e439c34d2e9bd87cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5805862701897214873
 GameObject:
   m_ObjectHideFlags: 0

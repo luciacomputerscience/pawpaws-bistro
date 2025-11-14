@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1328738265242006903}
   - component: {fileID: 8446407216733942862}
   - component: {fileID: 4781826064612895753}
+  - component: {fileID: 2788583630089724700}
   m_Layer: 0
   m_Name: RawOnionRingsItem
   m_TagString: NeedFrier
@@ -96,6 +97,18 @@ MonoBehaviour:
   cookTime: 8
   allergen: N/A
   sprite: {fileID: -4421439950884502888, guid: 05910d0877bc83243a640c2a48819238, type: 3}
+--- !u!114 &2788583630089724700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2358717139224049563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aacc887731509e439c34d2e9bd87cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4530492587321528848
 GameObject:
   m_ObjectHideFlags: 0
