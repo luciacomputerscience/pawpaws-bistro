@@ -10,6 +10,7 @@ public class ItemSlot : MonoBehaviour
         if(currentItem == null)
         {
             currentItem = item;
+            Debug.Log("added" + item.name + "to slot");
             item.SnapToSlot(this);
             isFull = true;
             return true;
@@ -21,22 +22,32 @@ public class ItemSlot : MonoBehaviour
         }
     }
 
-    public void RemoveItem()
+    public void OnMouseDown()
+    {
+        Debug.Log("Clicked slot: " + this.name +"Holding:" + currentItem);
+        if (transform.parent.name == "InventoryCanvas") {
+            if (isFull==false)
+            {
+                return;
+            }
+            else
+            {
+                bool sent = CookStationControl.Instance.ReceiveItem(currentItem);
+                if (sent)
+                {
+                    ClearSlot();
+                }
+            }    
+        } 
+    }
+    public void ClearSlot()
     {
         if(currentItem != null)
         {
             currentItem.StopTimer();
             currentItem.onCookingSurface = false;
             currentItem = null;
+            isFull = false;
         }
     }
-
-    // private void OnMouseDown()
-    // {
-        // if(currentItem != null)
-        // {
-            // InventoryManager.Instance.AddItem(currentItem);
-            // RemoveItem();
-        // }
-    // }
 }

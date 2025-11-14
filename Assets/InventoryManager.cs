@@ -12,11 +12,11 @@ public class InventoryManager : MonoBehaviour
 
     public bool AddItem(Item item)
     {
-        Debug.Log(itemSlot);
         for (int i = 0; i < itemSlot.Length; i++)
         {
             if(itemSlot[i].isFull == false)
             {
+                Debug.Log(itemSlot[i]);
                 itemSlot[i].AddItem(item);
                 return true;
             }

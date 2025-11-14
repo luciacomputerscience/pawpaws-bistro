@@ -58,7 +58,7 @@ public class Item : MonoBehaviour
 
     public void RemoveFromSlot()
     {
-        currentSlot?.RemoveItem();
+        currentSlot?.ClearSlot();
         currentSlot = null;
         onCookingSurface = false;
     }
