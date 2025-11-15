@@ -3,28 +3,37 @@ using UnityEngine;
 public class ItemSlot : MonoBehaviour
 {
     public Item currentItem;
+    public StationSwitcher stationSwitcher;
     public bool isFull;
 
     public bool AddItem(Item item)
     {
         if(currentItem == null)
         {
-            currentItem = item;
-            Debug.Log("CurrItemTag:" + item.tag +" | CurrSlotTag:" + this.tag);
-            if ((item.tag != ("Need" + this.tag)) && (this.tag != "Untagged"))
+            if (item.CompareTag("Need"+ stationSwitcher.currentScene))
             {
-                Debug.Log("Item does not belong here.");
-                Debug.Log(item);
-                ClearSlot();
-                return false;
+                Debug.Log("CurrItemTag:" + item.tag +" | CurrSlotTag:" + this.tag);
+                if ((item.tag != ("Need" + this.tag)) && (this.tag != "Untagged"))
+                {
+                    Debug.Log("Item does not belong here.");
+                    Debug.Log(item);
+                    ClearSlot();
+                    return false;
+                }
+                else
+                {
+                    Debug.Log("added" + item.name + "to "+ this.name + ". Command sent from AddItem in ItemSlot.cs");
+                    currentItem = item;
+                    item.SnapToSlot(this);
+                    isFull = true;
+                    return true;
+                }             
             }
             else
             {
-                Debug.Log("added" + item.name + "to "+ this.name + ". Command sent from AddItem in ItemSlot.cs");
-                item.SnapToSlot(this);
-                isFull = true;
-                return true;
-            }            
+                Debug.Log("Wrong Screen!");
+                return false;
+            }    
         }
         else
         {
