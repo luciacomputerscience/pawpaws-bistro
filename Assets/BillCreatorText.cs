@@ -18,7 +18,7 @@ public class BillCreatorText : MonoBehaviour
     List<string> CoolNames = new List<string>() { "Merleap's Magical Mambo","Cook County Country Cooked","This Plate Is Big Enough For The Two Of Us", "Gaze Den, no wait i meant Gay-","Superstored & Frozen", "b- b- bill bill  b- b- bill", "There Is A Mouse In New Orleans","Unbearably Expensive","Totally Pawsome"};
 
     // A public method that other scripts (like your button creator) can call
-    public void DisplayFoodsToCook(List<Foods> foodsToDisplay)
+    public void DisplayFoodsToCook(List<Foods> foodsToDisplay)//call this method to update the foods to display list
     {
         if (cookingListText == null)
         {
@@ -50,6 +50,11 @@ public class BillCreatorText : MonoBehaviour
     {
         
         DisplayFoodsToCook(foodsToDisplay);
+        
+    }
+    public void clearFoodsToDisplay()//call this method to clear the foods to display list
+    {
+        foodsToDisplay.Clear();
         
     }
     void Start()
