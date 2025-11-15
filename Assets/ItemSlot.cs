@@ -8,38 +8,40 @@ public class ItemSlot : MonoBehaviour
 
     public bool AddItem(Item item)
     {
-        if(currentItem == null)
+        if (item == null)
         {
-            if (item.CompareTag("Need"+ stationSwitcher.currentScene))
-            {
-                Debug.Log("CurrItemTag:" + item.tag +" | CurrSlotTag:" + this.tag);
-                if ((item.tag != ("Need" + this.tag)) && (this.tag != "Untagged"))
-                {
-                    Debug.Log("Item does not belong here.");
-                    Debug.Log(item);
-                    ClearSlot();
-                    return false;
-                }
-                else
-                {
-                    Debug.Log("added" + item.name + "to "+ this.name + ". Command sent from AddItem in ItemSlot.cs");
-                    currentItem = item;
-                    item.SnapToSlot(this);
-                    isFull = true;
-                    return true;
-                }             
-            }
-            else
-            {
-                Debug.Log("Wrong Screen!");
-                return false;
-            }    
+            Debug.LogError("ItemSlot.AddItem received a null item!");
+            return false;
         }
-        else
+    
+        if (currentItem != null)
         {
             Debug.Log("Slot full!");
             return false;
         }
+    
+        // Inventory slot
+        if (this.tag == "Untagged")
+        {
+            currentItem = item;
+            item.SnapToSlot(this);
+            isFull = true;
+            Debug.Log("Added " + item.name + " to inventory slot " + this.name);
+            return true;
+        }
+    
+        // Station slot
+        if (item.tag == "Need" + this.tag && item.tag == "Need" + stationSwitcher.currentScene)
+        {
+            currentItem = item;
+            item.SnapToSlot(this);
+            isFull = true;
+            Debug.Log("Added " + item.name + " to station slot " + this.name);
+            return true;
+        }
+    
+        Debug.Log("Item does not belong here or wrong screen: " + item.name);
+        return false;
     }
 
     public void OnMouseDown()
