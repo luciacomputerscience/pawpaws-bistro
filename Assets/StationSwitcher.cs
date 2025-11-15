@@ -55,12 +55,16 @@ public class StationSwitcher : MonoBehaviour
     {
         foreach (var slot in stationSlots)
         {
-            if (slot.currentItem == null) continue;
-
+            if (slot.currentItem == null) 
+            {
+                continue;
+            }
             SpriteRenderer sr = slot.currentItem.GetComponentInChildren<SpriteRenderer>();
-            if (sr == null) continue;
-
+            if (sr == null) {
+                continue;
+            }
             sr.enabled = slot.CompareTag(currentScene);
+            slot.currentItem.offScreen = !slot.CompareTag(currentScene);
         }
     }
 }
