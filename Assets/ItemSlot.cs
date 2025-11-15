@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class ItemSlot : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class ItemSlot : MonoBehaviour
             Debug.Log("Slot full!");
             return false;
         }
-    
+
         // Inventory slot
         if (this.tag == "Untagged")
         {
@@ -31,7 +32,15 @@ public class ItemSlot : MonoBehaviour
         }
     
         // Station slot
-        if (item.tag == "Need" + this.tag && item.tag == "Need" + stationSwitcher.currentScene)
+        if (this.tag == "Plate")
+        {
+            currentItem = item;
+            item.SnapToSlot(this);
+            isFull = true;
+            Debug.Log("Added " + item.name + " to station slot " + this.name);
+            return true;
+        }
+        else if (item.tag == "Need" + this.tag && item.tag == "Need" + stationSwitcher.currentScene && item.cookable == true)
         {
             currentItem = item;
             item.SnapToSlot(this);
@@ -47,7 +56,7 @@ public class ItemSlot : MonoBehaviour
     public void OnMouseDown()
     {
         Debug.Log("Clicked slot: " + this.name +"Holding:" + currentItem + ". Command sent from OnMouseDown in ItemSlot.cs");
-        if (transform.parent.name == "InventoryCanvas") {
+        if (transform.parent.name == "InventoryCanvas" ) {
             if (isFull==false)
             {
                 return;
@@ -57,7 +66,15 @@ public class ItemSlot : MonoBehaviour
                 bool sent = CookStationControl.Instance.ReceiveItem(currentItem);
                 if (sent)
                 {
-                    currentItem.onCookingSurface = true;
+                    if (currentItem.CompareTag("NeedPlate"))
+                    {
+                        currentItem.onCookingSurface = false;
+                    }
+                    else
+                    {
+                        currentItem.onCookingSurface = true;
+                    }
+
                     ClearSlot();
                 }
             }    
@@ -84,8 +101,13 @@ public class ItemSlot : MonoBehaviour
         if(currentItem != null)
         {
             currentItem.StopTimer();
+            Item tempItem = currentItem;
             currentItem = null;
             isFull = false;
+            if(tempItem.cookedTime > 0f)
+            {
+                tempItem.EndCook();
+            }
         }
     }
 }

@@ -14,15 +14,25 @@ public class Item : MonoBehaviour
 
     [Header("Cooking State")]
     public bool onCookingSurface = false;
+    public bool offScreen = false;
     public bool timerRunning = false;
-    private float cookedTime = 0f;
+    public bool cookable = true;
+    public float cookedTime = 0f;
 
     private ItemSlot currentSlot;
 
     private void Update()
     {
+        if(onCookingSurface && offScreen)
+        {
+            StartTimer();
+        }
+        else
+        {
+            StopTimer();
+        }
         if(timerRunning && onCookingSurface)
-            cookedTime += Time.deltaTime;
+        cookedTime += Time.deltaTime;
     }
 
     public void SnapToSlot(ItemSlot slot)
@@ -30,7 +40,6 @@ public class Item : MonoBehaviour
         currentSlot = slot;
         transform.position = slot.transform.position;
         transform.rotation = slot.transform.rotation;
-        StartTimer();
     }
 
     public void StartTimer() => timerRunning = true;
@@ -40,7 +49,10 @@ public class Item : MonoBehaviour
     {
         StopTimer();
         onCookingSurface = false;
-        Debug.Log("At Item.EndCook: OCS = TRUE");
+        if (!this.CompareTag("NeedPlate"))
+        {
+            cookable = false;
+        }
         float diff = cookTime - cookedTime;
         string note;
 
