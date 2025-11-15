@@ -901,6 +901,18 @@ MonoBehaviour:
   fryerStation: {fileID: 1505142952}
   grillStation: {fileID: 288452404}
   plateStation: {fileID: 530532579}
+  stationSlots:
+  - {fileID: 1374498155}
+  - {fileID: 1933044347}
+  - {fileID: 2115423023}
+  - {fileID: 498252847}
+  - {fileID: 708680867}
+  - {fileID: 1686000871}
+  - {fileID: 1696668579}
+  - {fileID: 1232220991}
+  - {fileID: 1921952001}
+  - {fileID: 1290311018}
+  - {fileID: 1627968486}
   currentScene: Plate
 --- !u!4 &387315763
 Transform:
