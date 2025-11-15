@@ -869,6 +869,54 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!1 &387315761
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 387315763}
+  - component: {fileID: 387315762}
+  m_Layer: 0
+  m_Name: StationSwitcher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &387315762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387315761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecb0049564a8e2f4ab7644bf613bd002, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fryerStation: {fileID: 1505142952}
+  grillStation: {fileID: 288452404}
+  plateStation: {fileID: 530532579}
+  currentScene: Plate
+--- !u!4 &387315763
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387315761}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.3641424, y: 0.23231256, z: -24.901447}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &487819703
 GameObject:
   m_ObjectHideFlags: 0
@@ -1171,6 +1219,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Grill
       objectReference: {fileID: 0}
+    - target: {fileID: 8214129638679261734, guid: bdc84ba31389f8747bb0fa5edddcc214, type: 3}
+      propertyPath: isFull
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8214129638679261734, guid: bdc84ba31389f8747bb0fa5edddcc214, type: 3}
+      propertyPath: stationSwitcher
+      value: 
+      objectReference: {fileID: 387315762}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1909,8 +1965,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5513541174627523557, guid: bdc84ba31389f8747bb0fa5edddcc214, type: 3}
       propertyPath: m_TagString
-      value: Grill
+      value: Plate
       objectReference: {fileID: 0}
+    - target: {fileID: 8214129638679261734, guid: bdc84ba31389f8747bb0fa5edddcc214, type: 3}
+      propertyPath: isFull
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8214129638679261734, guid: bdc84ba31389f8747bb0fa5edddcc214, type: 3}
+      propertyPath: stationSwitcher
+      value: 
+      objectReference: {fileID: 387315762}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2153,8 +2217,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5513541174627523557, guid: bdc84ba31389f8747bb0fa5edddcc214, type: 3}
       propertyPath: m_TagString
-      value: Grill
+      value: Plate
       objectReference: {fileID: 0}
+    - target: {fileID: 8214129638679261734, guid: bdc84ba31389f8747bb0fa5edddcc214, type: 3}
+      propertyPath: isFull
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8214129638679261734, guid: bdc84ba31389f8747bb0fa5edddcc214, type: 3}
+      propertyPath: stationSwitcher
+      value: 
+      objectReference: {fileID: 387315762}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2397,8 +2469,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5513541174627523557, guid: bdc84ba31389f8747bb0fa5edddcc214, type: 3}
       propertyPath: m_TagString
-      value: Frier
+      value: Fryer
       objectReference: {fileID: 0}
+    - target: {fileID: 8214129638679261734, guid: bdc84ba31389f8747bb0fa5edddcc214, type: 3}
+      propertyPath: isFull
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8214129638679261734, guid: bdc84ba31389f8747bb0fa5edddcc214, type: 3}
+      propertyPath: stationSwitcher
+      value: 
+      objectReference: {fileID: 387315762}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2552,6 +2632,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Grill
       objectReference: {fileID: 0}
+    - target: {fileID: 8214129638679261734, guid: bdc84ba31389f8747bb0fa5edddcc214, type: 3}
+      propertyPath: isFull
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8214129638679261734, guid: bdc84ba31389f8747bb0fa5edddcc214, type: 3}
+      propertyPath: stationSwitcher
+      value: 
+      objectReference: {fileID: 387315762}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2656,8 +2744,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
+      - m_Target: {fileID: 387315762}
+        m_TargetAssemblyTypeName: StationSwitcher, Assembly-CSharp
         m_MethodName: ChangeStation
         m_Mode: 5
         m_Arguments:
@@ -2770,6 +2858,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Grill
       objectReference: {fileID: 0}
+    - target: {fileID: 8214129638679261734, guid: bdc84ba31389f8747bb0fa5edddcc214, type: 3}
+      propertyPath: isFull
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8214129638679261734, guid: bdc84ba31389f8747bb0fa5edddcc214, type: 3}
+      propertyPath: stationSwitcher
+      value: 
+      objectReference: {fileID: 387315762}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2928,8 +3024,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5513541174627523557, guid: bdc84ba31389f8747bb0fa5edddcc214, type: 3}
       propertyPath: m_TagString
-      value: Frier
+      value: Fryer
       objectReference: {fileID: 0}
+    - target: {fileID: 8214129638679261734, guid: bdc84ba31389f8747bb0fa5edddcc214, type: 3}
+      propertyPath: isFull
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8214129638679261734, guid: bdc84ba31389f8747bb0fa5edddcc214, type: 3}
+      propertyPath: stationSwitcher
+      value: 
+      objectReference: {fileID: 387315762}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3251,8 +3355,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5513541174627523557, guid: bdc84ba31389f8747bb0fa5edddcc214, type: 3}
       propertyPath: m_TagString
-      value: Grill
+      value: Plate
       objectReference: {fileID: 0}
+    - target: {fileID: 8214129638679261734, guid: bdc84ba31389f8747bb0fa5edddcc214, type: 3}
+      propertyPath: isFull
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8214129638679261734, guid: bdc84ba31389f8747bb0fa5edddcc214, type: 3}
+      propertyPath: stationSwitcher
+      value: 
+      objectReference: {fileID: 387315762}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3336,8 +3448,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5513541174627523557, guid: bdc84ba31389f8747bb0fa5edddcc214, type: 3}
       propertyPath: m_TagString
-      value: Grill
+      value: Plate
       objectReference: {fileID: 0}
+    - target: {fileID: 8214129638679261734, guid: bdc84ba31389f8747bb0fa5edddcc214, type: 3}
+      propertyPath: isFull
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8214129638679261734, guid: bdc84ba31389f8747bb0fa5edddcc214, type: 3}
+      propertyPath: stationSwitcher
+      value: 
+      objectReference: {fileID: 387315762}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3494,8 +3614,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5513541174627523557, guid: bdc84ba31389f8747bb0fa5edddcc214, type: 3}
       propertyPath: m_TagString
-      value: Grill
+      value: Plate
       objectReference: {fileID: 0}
+    - target: {fileID: 8214129638679261734, guid: bdc84ba31389f8747bb0fa5edddcc214, type: 3}
+      propertyPath: isFull
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8214129638679261734, guid: bdc84ba31389f8747bb0fa5edddcc214, type: 3}
+      propertyPath: stationSwitcher
+      value: 
+      objectReference: {fileID: 387315762}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3611,8 +3739,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
+      - m_Target: {fileID: 387315762}
+        m_TargetAssemblyTypeName: StationSwitcher, Assembly-CSharp
         m_MethodName: ChangeStation
         m_Mode: 5
         m_Arguments:
@@ -4223,8 +4351,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
+      - m_Target: {fileID: 387315762}
+        m_TargetAssemblyTypeName: StationSwitcher, Assembly-CSharp
         m_MethodName: ChangeStation
         m_Mode: 5
         m_Arguments:
@@ -4337,6 +4465,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Grill
       objectReference: {fileID: 0}
+    - target: {fileID: 8214129638679261734, guid: bdc84ba31389f8747bb0fa5edddcc214, type: 3}
+      propertyPath: isFull
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8214129638679261734, guid: bdc84ba31389f8747bb0fa5edddcc214, type: 3}
+      propertyPath: stationSwitcher
+      value: 
+      objectReference: {fileID: 387315762}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4410,6 +4546,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inv1
       objectReference: {fileID: 0}
+    - target: {fileID: 8214129638679261734, guid: bdc84ba31389f8747bb0fa5edddcc214, type: 3}
+      propertyPath: stationSwitcher
+      value: 
+      objectReference: {fileID: 387315762}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4438,6 +4578,7 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 28341639}
   - {fileID: 68589233}
+  - {fileID: 387315763}
   - {fileID: 2006302751}
   - {fileID: 155132706}
   - {fileID: 1293790507}
