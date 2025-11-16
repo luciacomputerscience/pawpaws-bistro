@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class GameLoopPseudo : MonoBehaviour
 {
+
+    public List<Item> foodsList { get; set; }
+    public List<Item> cookedItems;
+    public List<Item> ToBeCooked;
+    public List<string> BillList;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -12,7 +18,7 @@ public class GameLoopPseudo : MonoBehaviour
         // and attaching the billcreator text script to the tmp and then feeding the tmp as an argument to the script (you can ignore this and do it later)
         //create a priority queue for each screen (grills and friers) i.e. sort the queue or stack based on how close each item is to being cooked and have two queues, one for each screen
         //alt, you can make two lists and sort them based on cook time remaining every update call
-
+        
 
     }
 

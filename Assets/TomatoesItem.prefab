@@ -134,4 +134,7 @@ MonoBehaviour:
   allergen: N/A
   sprite: {fileID: 21300000, guid: 82a84bab3bdd3074491595bcaec038a4, type: 3}
   onCookingSurface: 0
+  offScreen: 0
   timerRunning: 0
+  cookable: 1
+  cookedTime: 0

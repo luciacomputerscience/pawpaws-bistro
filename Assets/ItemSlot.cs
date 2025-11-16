@@ -6,6 +6,37 @@ public class ItemSlot : MonoBehaviour
     public Item currentItem;
     public StationSwitcher stationSwitcher;
     public bool isFull;
+    
+    public InventoryAudio invAud;
+    public bool playingAudio = false;
+    public bool playedAudio = false;
+    public bool isInventory;
+
+
+    private void Update()
+    {
+        if (isInventory == true)
+        {
+            if (isFull == true && playedAudio == false){
+                invAud.playAudio();
+                playedAudio = true;
+            }
+        }
+        else
+        {
+            while (isFull == true && playingAudio == false)
+            {
+
+                playingAudio = true;
+            }
+            if (isFull == false && playingAudio == true)
+            {
+
+                playingAudio = false;
+            }
+        }
+        
+    }
 
     public bool AddItem(Item item)
     {
@@ -42,6 +73,7 @@ public class ItemSlot : MonoBehaviour
         }
         else if (item.tag == "Need" + this.tag && item.tag == "Need" + stationSwitcher.currentScene && item.cookable == true)
         {
+
             currentItem = item;
             item.SnapToSlot(this);
             isFull = true;
@@ -63,6 +95,7 @@ public class ItemSlot : MonoBehaviour
             }
             else
             {
+                
                 bool sent = CookStationControl.Instance.ReceiveItem(currentItem);
                 if (sent)
                 {
@@ -76,6 +109,7 @@ public class ItemSlot : MonoBehaviour
                     }
 
                     ClearSlot();
+                    
                 }
             }    
         } 
@@ -104,7 +138,8 @@ public class ItemSlot : MonoBehaviour
             Item tempItem = currentItem;
             currentItem = null;
             isFull = false;
-            if(tempItem.cookedTime > 0f)
+            playedAudio = false;
+            if (tempItem.cookedTime > 0f)
             {
                 tempItem.EndCook();
             }
