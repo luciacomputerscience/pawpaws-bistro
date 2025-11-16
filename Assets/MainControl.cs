@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
+using System.Text;
 public class MainControl : MonoBehaviour
 {
     public bool ticketSent;
@@ -16,14 +17,24 @@ public class MainControl : MonoBehaviour
     public ItemSlot slot4;
     public ItemSlot slot5;
     public TicketGen generateTicket;
-    
-    
 
+    public TextMeshProUGUI BillText;
+
+    private BillCreatorText BillCreator;
+    
+    
+    void Awake()
+    {
+        BillCreator = BillText.GetComponent<BillCreatorText>();
+    }
 
     // Start is called before the first frame update
+    
     void Start()
     {
         currentOrder = generateTicket.GenerateOrder();
+        
+        BillCreator.AddFoodToDisplay(currentOrder);
         ticketSent = true;
     }
 
@@ -44,6 +55,7 @@ public class MainControl : MonoBehaviour
         if (ticketSent == false)
         {
             currentOrder = generateTicket.GenerateOrder();
+            BillCreator.AddFoodToDisplay(currentOrder);
             ticketSent = true;
         } 
     }
@@ -284,26 +296,26 @@ public class MainControl : MonoBehaviour
         if (finalDecimal == 1)
         {
             grade = "A+";
-            resultNote = "Pawpaw's Finest Chef!";
+            resultNote = "Pawpaw's Finest Paw!";
         } else if (finalDecimal >= 0.86)
         {
             grade = "A";
-            resultNote = "A Fine Sous Chef!";
+            resultNote = "A Fine Sous Paw!";
         } else if (finalDecimal >= 0.72) {
             grade = "B";
-            resultNote = "Not Bad, Cook.";
+            resultNote = "Not Bad, Not Pawsome.";
         } else if (finalDecimal >= 0.6){
             grade = "C";
-            resultNote = "Could use some work, Rookie.";
+            resultNote = "Could use some work, Cookie.";
         }
         else if (finalDecimal >= 0.5)
         {
             grade = "D";
-            resultNote = "First day on line, dishee?";
+            resultNote = "Still need to get your paws wet, Cookie?";
         } else if (finalDecimal <= 0.49)
         {
             grade = "F";
-            resultNote = "GET BACK TO THE DISH PIT!!";
+        resultNote = "GET YOUR PAWS BACK TO THE DISH PIT!!";
         }
 
     }
