@@ -5,10 +5,15 @@ public class Item : MonoBehaviour
 {
     [Header("Item Info")]
     [SerializeField] public string itemName;
-    [SerializeField] private float cookTime;
+    [SerializeField] public float cookTime;
     [SerializeField] private string allergen;
-    [SerializeField] private Sprite sprite;
+    [SerializeField] public Sprite sprite;
     public string note;
+    public Sprite raw;
+    public Sprite undercooked;
+    public Sprite Perfect;
+    public Sprite SlightOver;
+    public Sprite Burnt;
 
     public string ItemName => itemName;
     public Sprite Sprite => sprite;
@@ -28,6 +33,7 @@ public class Item : MonoBehaviour
         {
             note = "Not Cookable";
         }
+        sprite = raw;
     }
 
     private void Update()
@@ -42,6 +48,7 @@ public class Item : MonoBehaviour
         }
         if(timerRunning && onCookingSurface)
         cookedTime += Time.deltaTime;
+        updateSprite();
     }
 
     public void SnapToSlot(ItemSlot slot)
@@ -49,6 +56,29 @@ public class Item : MonoBehaviour
         currentSlot = slot;
         transform.position = slot.transform.position;
         transform.rotation = slot.transform.rotation;
+    }
+    public void updateSprite()
+    {
+        if (cookedTime < cookTime - 2)
+        {
+            sprite = raw;
+        }
+        else if (cookedTime < cookedTime - 1)
+        {
+            sprite = undercooked;
+        }
+        else if (cookedTime > cookedTime - 1 && cookedTime < cookTime + 1)
+        {
+            sprite = Perfect;
+        }
+        else if (cookedTime > cookTime + 1 && cookedTime < cookedTime + 2)
+        {
+            sprite = SlightOver;
+        }
+        else if (cookedTime > cookTime + 2)
+        {
+            sprite = Burnt;
+        }
     }
 
     public void StartTimer() => timerRunning = true;
