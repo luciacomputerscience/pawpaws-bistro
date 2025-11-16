@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -63,7 +64,7 @@ public class ItemSlot : MonoBehaviour
         }
     
         // Station slot
-        if (this.tag == "Plate")
+        if (this.tag == "Plate" && stationSwitcher.currentScene == "Plate")
         {
             currentItem = item;
             item.SnapToSlot(this);
