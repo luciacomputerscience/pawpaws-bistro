@@ -6,16 +6,16 @@ public class StationGrillFryerAudio : MonoBehaviour
 {
     public ItemSlot fryer1;
     public ItemSlot fryer2;
-    public ItemSlot Grill1;
+    //public ItemSlot Grill1;
     public ItemSlot Grill2;
     public ItemSlot Grill3;
     public ItemSlot Grill4;
     public Fryer1Audio F1Audio;
     public Fryer2Audio F2Audio;
-    public Grill1Audio G1Audio;
-    public Grill1Audio G2Audio;
-    public Grill1Audio G3Audio;
-    public Grill1Audio G4Audio;
+    public Grill3Audio G3Audio;
+    //public Grill1Audio G1Audio;
+    public Grill2Audio G2Audio;
+    public Grill4Audio G4Audio;
     private bool f1p= false;
     private bool f2p = false;
     private bool G1p = false;
@@ -62,14 +62,14 @@ public class StationGrillFryerAudio : MonoBehaviour
             f2p = false;
         }
 
-        if (Grill1.playingAudio == true)
-        {
-            G1Audio.playAudio();
-        }
-        else if (Grill1.playingAudio == false)
-        {
-            G1Audio.stopAudio();
-        }
+        //if (Grill1.playingAudio == true)
+        //{
+        //    G1Audio.playAudio();
+        //}
+        //else if (Grill1.playingAudio == false)
+        //{
+        //    G1Audio.stopAudio();
+        //}
 
         if (Grill2.playingAudio == true)
         {

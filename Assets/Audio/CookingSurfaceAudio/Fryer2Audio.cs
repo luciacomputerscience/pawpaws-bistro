@@ -4,28 +4,31 @@ using UnityEngine;
 
 public class Fryer2Audio : MonoBehaviour
 {
-    public new AudioSource audio;
+    public AudioSource audio2;
     public AudioClip audioClip;
+    
     // Start is called before the first frame update
     void Start()
     {
-        audio = GetComponent<AudioSource>();
+        audio2 = GetComponent<AudioSource>();
     }
 
     public void playAudio()
     {
-        if (audio != null)
+        if (audio2 != null)
         {
-            audio.Play();
-            audio.PlayOneShot(audioClip);
+            audio2.Play();
+            
             Debug.Log("Audio playinggg");
+            
         }
 
     }
 
     public void stopAudio()
     {
-        audio.Stop();
+        audio2.Stop();
+        
     }
 
 

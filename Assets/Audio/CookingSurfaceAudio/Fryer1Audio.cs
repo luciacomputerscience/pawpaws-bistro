@@ -6,7 +6,7 @@ public class Fryer1Audio : MonoBehaviour
 {
     public new AudioSource audio;
     public AudioClip audioClip;
-    public bool playing = false;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -15,12 +15,12 @@ public class Fryer1Audio : MonoBehaviour
 
     public void playAudio()
     {
-        if (audio != null && playing == false)
+        if (audio != null)
         {
             audio.Play();
-            audio.PlayOneShot(audioClip);
+            
             Debug.Log("Audio playinggg");
-            playing = true;
+            
 
         }
         
@@ -29,7 +29,7 @@ public class Fryer1Audio : MonoBehaviour
     public void stopAudio()
     {
         audio.Stop();
-        playing = false;
+        
     }
 
     // Update is called once per frame

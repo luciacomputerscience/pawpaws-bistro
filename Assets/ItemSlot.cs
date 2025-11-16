@@ -51,8 +51,8 @@ public class ItemSlot : MonoBehaviour
             Debug.Log("Slot full!");
             return false;
         }
-
         // Inventory slot
+
         if (this.tag == "Untagged")
         {
             currentItem = item;

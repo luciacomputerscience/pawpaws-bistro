@@ -2,33 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Grill1Audio : MonoBehaviour
+public class Grill4Audio : MonoBehaviour
 {
-    public AudioSource audio1;
+    public new AudioSource audio;
     public AudioClip audioClip;
-    
+    public bool playing = false;
     // Start is called before the first frame update
     void Start()
     {
-        audio1 = GetComponent<AudioSource>();
+        audio = GetComponent<AudioSource>();
     }
 
     public void playAudio()
     {
-        if (audio1 != null )
+        if (audio != null && playing == false)
         {
-            audio1.Play();
-            //audio.PlayOneShot(audioClip);
+            audio.Play();
+            audio.PlayOneShot(audioClip);
             Debug.Log("Audio playinggg");
-            
+            playing = true;
         }
 
     }
 
     public void stopAudio()
     {
-        audio1.Stop();
-        
+        audio.Stop();
+        playing = false;
     }
 
     // Update is called once per frame
