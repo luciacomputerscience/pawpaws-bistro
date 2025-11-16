@@ -4,10 +4,11 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
     [Header("Item Info")]
-    [SerializeField] private string itemName;
+    [SerializeField] public string itemName;
     [SerializeField] private float cookTime;
     [SerializeField] private string allergen;
     [SerializeField] private Sprite sprite;
+    public string note;
 
     public string ItemName => itemName;
     public Sprite Sprite => sprite;
@@ -20,6 +21,14 @@ public class Item : MonoBehaviour
     public float cookedTime = 0f;
 
     private ItemSlot currentSlot;
+
+    private void Start()
+    {
+        if (itemName == "Lettuce" || itemName == "Cheese")
+        {
+            note = "Not Cookable";
+        }
+    }
 
     private void Update()
     {
@@ -54,9 +63,9 @@ public class Item : MonoBehaviour
             cookable = false;
         }
         float diff = cookTime - cookedTime;
-        string note;
+        
 
-        if(diff <= 1f && diff >= -1f) note = "Perfectly cooked!";
+        if(diff <= 1f && diff >= -1f) note = "Perfectly Cooked!";
         else if(diff < 3f && diff > 1f) note = "Slightly Undercooked!";
         else if(diff > 3f) note = "Undercooked!";
         else if(diff < -1f && diff > -3f) note = "Slightly Overcooked!";
@@ -64,5 +73,9 @@ public class Item : MonoBehaviour
 
         Debug.Log($"{itemName}: {note}" + ". Command sent from EndCook in Item.cs");
         return note;
+    }
+    public void Destroy()
+    {
+        Destroy(gameObject);
     }
 }
