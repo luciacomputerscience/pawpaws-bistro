@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using TMPro;
 using System.Text;
@@ -19,8 +20,11 @@ public class MainControl : MonoBehaviour
     public TicketGen generateTicket;
 
     public TextMeshProUGUI BillText;
+    public TextMeshProUGUI ScoreText;
+    public TextMeshProUGUI FeedbackText;
 
     private BillCreatorText BillCreator;
+    public GameObject gameOverScreen;
     
     
     void Awake()
@@ -57,7 +61,8 @@ public class MainControl : MonoBehaviour
             currentOrder = generateTicket.GenerateOrder();
             BillCreator.AddFoodToDisplay(currentOrder);
             ticketSent = true;
-        } 
+        }
+
     }
 
     public void OrderShipped()
@@ -289,34 +294,47 @@ public class MainControl : MonoBehaviour
     }
     public void GameOver()
     {
-        int finalDecimal = score / potentialScore;
-        string finalScore = score + "/" + potentialScore;
-        string grade;
-        string resultNote;
-        if (finalDecimal == 1)
+        gameOverScreen.SetActive(true);
+        double finalDecimal = 0.00;
+        string finalScore = "0";
+        if (potentialScore != 0)
         {
-            grade = "A+";
+            finalDecimal = (double)score / potentialScore;
+            finalScore = score + "/" + potentialScore;
+        }
+        
+        string grade = "";
+        string resultNote = "";
+        if (finalDecimal >= 1)
+        {
+            grade = "A+"; 
             resultNote = "Pawpaw's Finest Paw!";
-        } else if (finalDecimal >= 0.86)
+        } 
+        else if (finalDecimal < 1 && finalDecimal >= 0.86)
         {
             grade = "A";
             resultNote = "A Fine Sous Paw!";
-        } else if (finalDecimal >= 0.72) {
+        } 
+        else if (finalDecimal < .86 && finalDecimal >= 0.72) {
             grade = "B";
             resultNote = "Not Bad, Not Pawsome.";
-        } else if (finalDecimal >= 0.6){
+        } 
+        else if (finalDecimal < .72 && finalDecimal >= 0.6){
             grade = "C";
             resultNote = "Could use some work, Cookie.";
         }
-        else if (finalDecimal >= 0.5)
+        else if (finalDecimal < .60 && finalDecimal >= 0.5)
         {
             grade = "D";
             resultNote = "Still need to get your paws wet, Cookie?";
-        } else if (finalDecimal <= 0.49)
+        } 
+        else if (finalDecimal <= 0.49)
         {
             grade = "F";
-        resultNote = "GET YOUR PAWS BACK TO THE DISH PIT!!";
+            resultNote = "GET YOUR PAWS BACK TO THE DISH PIT!!";
         }
+        ScoreText.text = "Score: " + finalScore + "  (" + grade + ")";
+        FeedbackText.text = resultNote;
 
     }
 
