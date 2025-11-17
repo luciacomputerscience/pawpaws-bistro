@@ -7,7 +7,7 @@ using System.Text;
 public class BillCreatorText : MonoBehaviour
 {
     public TextMeshProUGUI cookingListText;
-    public List<string> foodsList = new List<string>() {"Beef", "Chicken", "Fries", "Onion Rings", "Calamari", "Fish" };
+    public List<string> foodsList = new List<string>() {"Beef", "Chicken", "Fries", "Onion Rings", "Calamari", "Fish", "Lettuce", "Cheese", "Tomatoes" };
     private List<string> foodsToDisplay = new List<string>();
     public List<string> AllergenNames = new List<string>(){"Stinky","Stanky","Organic Lab Product","Un-bearably infected","Fitzkulent"};
     public List<string> FoodPrices = new List<string>(){"59.9","69","Three Ninety","4 dollhairs","7.99 on a sunday","8.99 but not on a monday"};
@@ -35,6 +35,10 @@ public class BillCreatorText : MonoBehaviour
                     else if (food == "Fries" || food == "Onion Rings" || food == "Calamari" )
                     {
                         foodsToDisplay.Add("Side: " + food);
+                    }
+                    else if (food == "Lettuce" || food == "Cheese" || food == "Tomatoes")
+                    {
+                        foodsToDisplay.Add("NOTE: " + "Add " + food + " to burger.");
                     }
                      else 
                      {
