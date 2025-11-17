@@ -73,12 +73,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 82a84bab3bdd3074491595bcaec038a4, type: 3}
+  m_Sprite: {fileID: 6877156210995117044, guid: 82a84bab3bdd3074491595bcaec038a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.44, y: 1.39}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -132,7 +132,12 @@ MonoBehaviour:
   itemName: Tomatoes
   cookTime: 1000
   allergen: N/A
-  sprite: {fileID: 21300000, guid: 82a84bab3bdd3074491595bcaec038a4, type: 3}
+  note: 
+  rawSprite: {fileID: 6877156210995117044, guid: 82a84bab3bdd3074491595bcaec038a4, type: 3}
+  underSprite: {fileID: 6877156210995117044, guid: 82a84bab3bdd3074491595bcaec038a4, type: 3}
+  perfectSprite: {fileID: 6877156210995117044, guid: 82a84bab3bdd3074491595bcaec038a4, type: 3}
+  overSprite: {fileID: 6877156210995117044, guid: 82a84bab3bdd3074491595bcaec038a4, type: 3}
+  burntSprite: {fileID: 6877156210995117044, guid: 82a84bab3bdd3074491595bcaec038a4, type: 3}
   onCookingSurface: 0
   offScreen: 0
   timerRunning: 0

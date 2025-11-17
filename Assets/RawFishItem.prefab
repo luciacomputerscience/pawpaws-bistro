@@ -45,12 +45,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe336393fd7a50f4eae7f1ef338812f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: RawFish
+  itemName: Fish
   cookTime: 10
   allergen: N/A
-  sprite: {fileID: -6982350260640849486, guid: c9ab0d8d7d034b548990a7c50e4c634b, type: 3}
+  note: 
+  rawSprite: {fileID: 297429961080970547, guid: 77fe88079d21dd046a04342265872c45, type: 3}
+  underSprite: {fileID: 3633016550530012664, guid: dab9d28a556acee4a8eb514a12af9a3a, type: 3}
+  perfectSprite: {fileID: -4923038632265931732, guid: 91899cc40c850134dbcc20278d550300, type: 3}
+  overSprite: {fileID: -2181010856099834657, guid: 9614c30cdc76ed1449d03082f9863933, type: 3}
+  burntSprite: {fileID: 4472393613699831396, guid: de65c700b2f47dd458b077827c012866, type: 3}
   onCookingSurface: 0
+  offScreen: 0
   timerRunning: 0
+  cookable: 1
+  cookedTime: 0
 --- !u!1 &5973125177810778532
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,12 +132,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6982350260640849486, guid: c9ab0d8d7d034b548990a7c50e4c634b, type: 3}
+  m_Sprite: {fileID: 297429961080970547, guid: 77fe88079d21dd046a04342265872c45, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.44, y: 1.39}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

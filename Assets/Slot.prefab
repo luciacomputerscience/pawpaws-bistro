@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 20
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.20754719, g: 0.20754719, b: 0.20754719, a: 0.34901962}
+  m_Color: {r: 0.20754719, g: 0.20754719, b: 0.20754719, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -100,7 +100,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentItem: {fileID: 0}
+  stationSwitcher: {fileID: 0}
   isFull: 0
+  invAud: {fileID: 0}
+  playingAudio: 0
+  playedAudio: 0
+  isInventory: 0
 --- !u!61 &-2644090186126481084
 BoxCollider2D:
   m_ObjectHideFlags: 0

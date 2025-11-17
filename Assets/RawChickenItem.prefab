@@ -73,12 +73,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1019360793386949115, guid: 25f29ac4584c43a42bd596cc13f3e97e, type: 3}
+  m_Sprite: {fileID: 4364309430853467194, guid: fc2cf8cd33390eb408b65f338434b8e3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.42, y: 1.43}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -129,11 +129,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe336393fd7a50f4eae7f1ef338812f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: RawChicken
+  itemName: Chicken
   cookTime: 12
   allergen: N/A
-  sprite: {fileID: -1019360793386949115, guid: 25f29ac4584c43a42bd596cc13f3e97e, type: 3}
   note: 
+  rawSprite: {fileID: 4364309430853467194, guid: fc2cf8cd33390eb408b65f338434b8e3, type: 3}
+  underSprite: {fileID: -5180656501292337662, guid: 11080183660925f4fb7f6dfbf65a4ec0, type: 3}
+  perfectSprite: {fileID: -6190911096004369375, guid: 45657acabb9c9e346a94e85f684d3f55, type: 3}
+  overSprite: {fileID: 1707165125122850838, guid: 8c010669a4ef4624486f372cbdaa04c6, type: 3}
+  burntSprite: {fileID: -2318589620306305132, guid: 7372026a3e550ac4d914401f211e5ed3, type: 3}
   onCookingSurface: 0
   offScreen: 0
   timerRunning: 0

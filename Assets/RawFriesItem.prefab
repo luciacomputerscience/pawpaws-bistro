@@ -45,12 +45,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe336393fd7a50f4eae7f1ef338812f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: RawFries
+  itemName: Fries
   cookTime: 8
   allergen: N/A
-  sprite: {fileID: 21300000, guid: fc1e855b381025f40896857c310c1808, type: 3}
+  note: 
+  rawSprite: {fileID: 3859210868899232871, guid: 16c894a47289e384fbbfc1a3235fb019, type: 3}
+  underSprite: {fileID: -408974354561068404, guid: 2a77f25d28747524482e71cbe3f546eb, type: 3}
+  perfectSprite: {fileID: -2679659217609318056, guid: 6223ad999b0cc654dadc4a10ddbb9a38, type: 3}
+  overSprite: {fileID: 540916561547290922, guid: a240aba6cd480ca4b85bccc0f58347c8, type: 3}
+  burntSprite: {fileID: -498447101118022833, guid: 3a839c7d53cd958498760c37b4b59b56, type: 3}
   onCookingSurface: 0
+  offScreen: 0
   timerRunning: 0
+  cookable: 1
+  cookedTime: 0
 --- !u!1 &8704113023240346656
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,12 +132,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fc1e855b381025f40896857c310c1808, type: 3}
+  m_Sprite: {fileID: 3859210868899232871, guid: 16c894a47289e384fbbfc1a3235fb019, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.43, y: 1.36}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

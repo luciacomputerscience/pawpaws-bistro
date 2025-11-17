@@ -45,12 +45,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe336393fd7a50f4eae7f1ef338812f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: RawOnionRings
+  itemName: Onion Rings
   cookTime: 8
   allergen: N/A
-  sprite: {fileID: -4421439950884502888, guid: 05910d0877bc83243a640c2a48819238, type: 3}
+  note: 
+  rawSprite: {fileID: -480198745010139450, guid: 68e2f2234035b73478a40c77cf5b0cbd, type: 3}
+  underSprite: {fileID: -2966021645777167054, guid: 2b07afa049fa6ce48b1d0b36128071b6, type: 3}
+  perfectSprite: {fileID: 4333064033999790943, guid: f881a59e7fd612247a572cf5beb9f90f, type: 3}
+  overSprite: {fileID: 5520998908398397541, guid: 90ecfbf8405df5249b0a5ba5173e0d3e, type: 3}
+  burntSprite: {fileID: 4716434955729382949, guid: fc1499c6660ce104d9a8bb4382600ea0, type: 3}
   onCookingSurface: 0
+  offScreen: 0
   timerRunning: 0
+  cookable: 1
+  cookedTime: 0
 --- !u!1 &4530492587321528848
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,12 +132,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -4421439950884502888, guid: 05910d0877bc83243a640c2a48819238, type: 3}
+  m_Sprite: {fileID: -480198745010139450, guid: 68e2f2234035b73478a40c77cf5b0cbd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.35, y: 1.37}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

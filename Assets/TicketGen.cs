@@ -17,11 +17,13 @@ public class TicketGen : MonoBehaviour
         foodItems.Add("Chicken");
         foodItems.Add("Lettuce");
         foodItems.Add("Cheese");
+        foodItems.Add("Tomatoes");
         foodItems.Add("Fish");
         foodItems.Add("Fries");
         foodItems.Add("Onion Rings");
         foodItems.Add("Top Bun");
         foodItems.Add("Bottom Bun");
+        foodItems.Add("Calamari");
         Necessities.Add("Top Bun");
         Necessities.Add("Bottom Bun");
         burgerProtein.Add("Beef");
@@ -29,9 +31,10 @@ public class TicketGen : MonoBehaviour
         burgerProtein.Add("Fish");
         burgerFixings.Add("Lettuce");
         burgerFixings.Add("Cheese");
+        burgerFixings.Add("Tomatoes");
         side.Add("Fries");
         side.Add("Onion Rings");
-
+        side.Add("Calamari");
     }
 
     public List<string> GenerateOrder()

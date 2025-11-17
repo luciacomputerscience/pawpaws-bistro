@@ -7,11 +7,19 @@ public class Item : MonoBehaviour
     [SerializeField] public string itemName;
     [SerializeField] private float cookTime;
     [SerializeField] private string allergen;
-    [SerializeField] private Sprite sprite;
     public string note;
+    // [SerializeField] private Sprite sprite;
+
+    [Header("Cooking Sprites")]
+    [SerializeField] private Sprite rawSprite;
+    [SerializeField] private Sprite underSprite;
+    [SerializeField] private Sprite perfectSprite;
+    [SerializeField] private Sprite overSprite;
+    [SerializeField] private Sprite burntSprite;
+
 
     public string ItemName => itemName;
-    public Sprite Sprite => sprite;
+    // public Sprite Sprite => sprite;
 
     [Header("Cooking State")]
     public bool onCookingSurface = false;
@@ -21,14 +29,21 @@ public class Item : MonoBehaviour
     public float cookedTime = 0f;
 
     private ItemSlot currentSlot;
+    private SpriteRenderer spriteRenderer;
+
 
     private void Start()
     {
-        if (itemName == "Lettuce" || itemName == "Cheese")
+        if (itemName == "Lettuce" || itemName == "Cheese" || itemName == "Tomato")
         {
             note = "Not Cookable";
         }
     }
+
+    private void Awake()
+    {
+        spriteRenderer = transform.Find("Sprite").GetComponent<SpriteRenderer>();
+    }   
 
     private void Update()
     {
@@ -42,7 +57,41 @@ public class Item : MonoBehaviour
         }
         if(timerRunning && onCookingSurface)
         cookedTime += Time.deltaTime;
+
+
     }
+
+    public void UpdateCookSprite()
+    {
+        float diff = cookTime - cookedTime;
+
+        if (diff >= 3f)
+        {
+            // Raw → very undercooked
+            spriteRenderer.sprite = rawSprite;
+        }
+        else if (diff > 1f)
+        {
+            // Slightly undercooked
+            spriteRenderer.sprite = underSprite;
+        }
+        else if (diff >= -1f)
+        {
+            // Perfect
+            spriteRenderer.sprite = perfectSprite;
+        }
+        else if (diff > -3f)
+        {
+            // Slightly overcooked
+            spriteRenderer.sprite = overSprite;
+        }
+        else
+        {
+            // Burnt
+            spriteRenderer.sprite = burntSprite;
+        }
+    }
+
 
     public void SnapToSlot(ItemSlot slot)
     {

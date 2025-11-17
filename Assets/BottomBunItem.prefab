@@ -73,12 +73,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6412762683731264431, guid: 4cce527d2062c284696bb1c451b8f918, type: 3}
+  m_Sprite: {fileID: 5362735838549604449, guid: 0f1e80b3571f3724daa47c21006956fb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.44, y: 1.44}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -129,9 +129,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe336393fd7a50f4eae7f1ef338812f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: BottomBunItem
+  itemName: Bottom Bun
   cookTime: 1000
   allergen: N/A
-  sprite: {fileID: -6412762683731264431, guid: 4cce527d2062c284696bb1c451b8f918, type: 3}
+  note: 
+  rawSprite: {fileID: 5362735838549604449, guid: 0f1e80b3571f3724daa47c21006956fb, type: 3}
+  underSprite: {fileID: 5362735838549604449, guid: 0f1e80b3571f3724daa47c21006956fb, type: 3}
+  perfectSprite: {fileID: 5362735838549604449, guid: 0f1e80b3571f3724daa47c21006956fb, type: 3}
+  overSprite: {fileID: 5362735838549604449, guid: 0f1e80b3571f3724daa47c21006956fb, type: 3}
+  burntSprite: {fileID: 5362735838549604449, guid: 0f1e80b3571f3724daa47c21006956fb, type: 3}
   onCookingSurface: 0
+  offScreen: 0
   timerRunning: 0
+  cookable: 1
+  cookedTime: 0

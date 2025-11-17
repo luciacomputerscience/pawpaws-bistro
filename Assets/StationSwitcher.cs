@@ -65,6 +65,7 @@ public class StationSwitcher : MonoBehaviour
             }
             sr.enabled = slot.CompareTag(currentScene);
             slot.currentItem.offScreen = !slot.CompareTag(currentScene);
+            slot.currentItem.UpdateCookSprite();
         }
     }
 }

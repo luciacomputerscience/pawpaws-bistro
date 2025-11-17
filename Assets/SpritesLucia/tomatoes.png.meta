@@ -3,11 +3,8 @@ guid: 82a84bab3bdd3074491595bcaec038a4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7219557001560659422
-    second: kidney_beans_0
-  - first:
-      213: -2710855589002161557
-    second: kidney_beans_1
+      213: 6877156210995117044
+    second: tomatoes_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -49,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -125,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: kidney_beans_0
+      name: tomatoes_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 8
-        height: 14
+        y: 5
+        width: 144
+        height: 139
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,29 +136,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 22aea4e682bfecb90800000000000000
-      internalID: -7219557001560659422
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: kidney_beans_1
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 2
-        width: 8
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b62d42c543b116ad0800000000000000
-      internalID: -2710855589002161557
+      spriteID: 4fb3c3d1321907f50800000000000000
+      internalID: 6877156210995117044
       vertices: []
       indices: 
       edges: []
@@ -169,16 +145,14 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      kidney_beans_0: -7219557001560659422
-      kidney_beans_1: -2710855589002161557
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -3,8 +3,8 @@ guid: 7b300cd09a2c2164cad61476e195cbf1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5541253663642590004
-    second: cookie_0
+      213: 3425347559921304950
+    second: topbun_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -122,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cookie_0
+      name: topbun_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 4
-        width: 23
-        height: 22
+        x: 0
+        y: 0
+        width: 144
+        height: 143
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,8 +136,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 43b9fb729dc76ec40800000000000000
-      internalID: 5541253663642590004
+      spriteID: 6754c5d1577498f20800000000000000
+      internalID: 3425347559921304950
       vertices: []
       indices: 
       edges: []
@@ -152,8 +152,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      cookie_0: 5541253663642590004
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

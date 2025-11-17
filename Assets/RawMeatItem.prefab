@@ -73,12 +73,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1292103146064027224, guid: e26a1a27d4b66e74992c44363e5a2cb4, type: 3}
+  m_Sprite: {fileID: 8012851822673479948, guid: 938b6d1ea9efbc148810b61ecf03d33c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.44, y: 1.4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -129,9 +129,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe336393fd7a50f4eae7f1ef338812f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: RawMeat
+  itemName: Meat
   cookTime: 10
   allergen: N/A
-  sprite: {fileID: -1292103146064027224, guid: e26a1a27d4b66e74992c44363e5a2cb4, type: 3}
+  note: 
+  rawSprite: {fileID: 8012851822673479948, guid: 938b6d1ea9efbc148810b61ecf03d33c, type: 3}
+  underSprite: {fileID: -1052718685791036297, guid: 2f7c674432620e54da02e943c343f815, type: 3}
+  perfectSprite: {fileID: 8220240096976598977, guid: 0b2b591742759e14c81628f429e0b395, type: 3}
+  overSprite: {fileID: 2679002994233716466, guid: fa3f321861812774eb59c23d5b27b4eb, type: 3}
+  burntSprite: {fileID: -7399295226070751970, guid: fc396d9cd111e2b4a8474d9dcfa23884, type: 3}
   onCookingSurface: 0
+  offScreen: 0
   timerRunning: 0
+  cookable: 1
+  cookedTime: 0
